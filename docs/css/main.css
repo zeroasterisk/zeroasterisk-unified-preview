@@ -13,16 +13,18 @@ html {
 body {
     font-family: 'Courier New', 'Monaco', 'Menlo', 'Consolas', 'SF Mono', 'Roboto Mono', monospace;
     color: #2c3e50;
-    background: url('/css/engineering-paper.svg') repeat;
-    background-attachment: scroll;
-    background-size: 40px 40px;
+    background: #fefefe;
+    /* Ultra-subtle graph paper pattern using CSS gradients */
+    background-image: 
+        linear-gradient(rgba(248, 250, 251, 0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(248, 250, 251, 0.4) 1px, transparent 1px);
+    background-size: 20px 20px;
     line-height: 1.7;
     font-weight: 400;
-    /* Subtle vintage paper texture */
     position: relative;
 }
 
-/* Add subtle paper aging overlay */
+/* Extremely subtle coffee stain effect */
 body::before {
     content: '';
     position: fixed;
@@ -30,9 +32,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.02) 0%, transparent 20%),
-                radial-gradient(circle at 80% 20%, rgba(160, 82, 45, 0.015) 0%, transparent 15%),
-                radial-gradient(circle at 40% 40%, rgba(205, 133, 63, 0.01) 0%, transparent 10%);
+    background: radial-gradient(circle at 85% 15%, rgba(139, 69, 19, 0.005) 0%, transparent 20%),
+                radial-gradient(circle at 15% 85%, rgba(160, 82, 45, 0.003) 0%, transparent 15%);
     pointer-events: none;
     z-index: -1;
 }
@@ -46,11 +47,11 @@ body::before {
 /* Header Styles */
 .site-header {
     background: rgba(255, 255, 255, 0.92);
-    border-bottom: 2px solid #34495e;
+    border-bottom: 1px solid #e1e8ed;
     position: static;
     backdrop-filter: blur(2px);
-    /* Subtle engineering border */
-    box-shadow: 0 1px 0 #e1e8ed, 0 2px 0 #f8f9fa;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .header-content {
