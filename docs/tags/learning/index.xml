@@ -15,5 +15,19 @@
       <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/</guid>
       <description>Playing with Elixir is just FUN I&amp;rsquo;ve been using Elixir for a few weeks now, and I have to say - it really lives up to the hype. The functional programming paradigms, the actor model with OTP, and the fault-tolerant design make it a joy to work with.&#xA;What Makes Elixir Special Pattern Matching: One of the most elegant features. Instead of complex conditionals, you can pattern match directly in function definitions:</description>
     </item>
+    <item>
+      <title>2017 nerd goals</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/01/2017-nerd-goals/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/01/2017-nerd-goals/</guid>
+      <description>2017 nerd goals Personal Nerd Goals publish - rejuvenate a history of developer advocacy learn elixir - build a couple of projects from a couple of angles learn machine learning basics This year I&amp;rsquo;m focusing on getting back to my roots in developer advocacy.</description>
+    </item>
+    <item>
+      <title>Life Changingly Good TED Radio Hour</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/personal/2014/10/life-changingly-good-ted-radio-hour/</link>
+      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/personal/2014/10/life-changingly-good-ted-radio-hour/</guid>
+      <description>Life Changingly Good TED Radio Hour: &amp;ldquo;The Source of Creativity&amp;rdquo; Basic summary: &amp;ldquo;everyone is and can be creative: you just have to be fearless about failing, and practice a bunch.&amp;rdquo;&#xA;Being creative is a skill, available to everyone.&#xA;This has huge implications for how we raise our kids. Instead of telling them they&amp;rsquo;re &amp;ldquo;not creative,&amp;rdquo; we should encourage them to experiment, fail, and try again.</description>
+    </item>
   </channel>
 </rss>

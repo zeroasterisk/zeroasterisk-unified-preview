@@ -15,5 +15,12 @@
       <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/</guid>
       <description>Playing with Elixir is just FUN I&amp;rsquo;ve been using Elixir for a few weeks now, and I have to say - it really lives up to the hype. The functional programming paradigms, the actor model with OTP, and the fault-tolerant design make it a joy to work with.&#xA;What Makes Elixir Special Pattern Matching: One of the most elegant features. Instead of complex conditionals, you can pattern match directly in function definitions:</description>
     </item>
+    <item>
+      <title>2017 nerd goals</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/01/2017-nerd-goals/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/01/2017-nerd-goals/</guid>
+      <description>2017 nerd goals Personal Nerd Goals publish - rejuvenate a history of developer advocacy learn elixir - build a couple of projects from a couple of angles learn machine learning basics This year I&amp;rsquo;m focusing on getting back to my roots in developer advocacy.</description>
+    </item>
   </channel>
 </rss>
