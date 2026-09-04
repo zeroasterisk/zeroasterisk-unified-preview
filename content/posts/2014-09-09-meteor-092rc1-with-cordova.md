@@ -1,7 +1,7 @@
 ---
 title: "Meteor 092rc1 with Cordova"
 date: 2014-09-09
-tags: ["meteorjs", "cordova", "mobile", "javascript"]
+tags: ["meteorjs", "cordova", "mobile", "javascript", "2014"]
 type: "posts"
 ---
 

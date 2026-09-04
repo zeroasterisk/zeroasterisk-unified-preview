@@ -2,7 +2,7 @@
 title: "5 Things Every AI Engineer Should Know About Agent Sandboxes"
 date: 2026-09-01  
 description: "Essential insights for AI engineers working with agent sandbox environments and secure execution contexts"
-tags: ["ai", "agents", "sandboxes", "google-cloud", "security", "cross-post"]
+tags: ["ai", "agents", "sandboxes", "google-cloud", "security", "cross-post", "2026"]
 type: "posts"
 canonical_url: "https://x.com/GoogleCloudTech/status/2094598332131709078"
 external_source: "Google Cloud Tech (X/Twitter)"
