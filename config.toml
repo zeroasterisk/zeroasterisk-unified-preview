@@ -1,0 +1,82 @@
+baseURL = "https://zeroasterisk.com"
+languageCode = "en-us"
+title = "Alan Blount | AI/ML Engineer at Google"
+
+# Modern Hugo configuration
+paginate = 10
+theme = "minimal-tech"
+canonifyURLs = true
+enableRobotsTXT = true
+enableEmoji = true
+
+# Hugo build settings
+buildDrafts = false
+buildExpired = false
+buildFuture = false
+
+# Permalinks - clean URLs
+[permalinks]
+  posts = "/:year/:month/:slug/"
+  work = "/work/:slug/"
+  personal = "/personal/:year/:month/:slug/"
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  topic = "topics"
+
+# Main menu
+[[menu.main]]
+  identifier = "work"
+  name = "Work & AI"
+  url = "/work/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Technical Posts"
+  url = "/posts/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "personal"
+  name = "Personal"
+  url = "/personal/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+# Site parameters
+[params]
+  description = "AI/ML Engineer at Google working on agent systems, memory architectures, and LLMOps. Creator of Headroom and contributor to agentic runtimes."
+  
+  # Author info
+  author = "Alan Blount"
+  job = "AI/ML Engineer at Google"
+  location = "Boulder, CO"
+  
+  # Social links
+  github = "zeroasterisk"
+  twitter = "zeroasterisk"
+  linkedin = "alanblount"
+  email = "alan@zeroasterisk.com"
+  
+  # Site settings
+  show_reading_time = true
+  show_word_count = false
+  show_last_modified = true
+  
+  # Professional focus areas
+  focus_areas = ["AI Agent Systems", "Memory Architectures", "LLMOps", "Agentic Runtimes", "Developer Tools"]
+  
+  # Analytics
+  googleAnalytics = "UA-2011466-1"
+  
+  # Content organization
+  highlight_work = true
+  minimal_style = true

@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="home-page">
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">{{ .Site.Params.author }}</h1>
+            <p class="hero-subtitle">{{ .Site.Params.job }}</p>
+            <p class="hero-description">{{ .Site.Params.description }}</p>
+            
+            {{ with .Site.Params.focus_areas }}
+            <div class="focus-areas">
+                <h3>Focus Areas</h3>
+                <ul class="focus-list">
+                {{ range . }}
+                    <li class="focus-item">{{ . }}</li>
+                {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </section>
+        
+        <!-- Recent Work -->
+        <section class="recent-content">
+            <h2>Recent Work & Technical Posts</h2>
+            <div class="content-grid">
+                {{ $workPages := where .Site.RegularPages "Type" "work" }}
+                {{ $postPages := where .Site.RegularPages "Type" "posts" }}
+                {{ $recentContent := union $workPages $postPages | first 6 }}
+                
+                {{ range $recentContent }}
+                <article class="content-card">
+                    <div class="card-meta">
+                        <span class="card-type">{{ .Type | title }}</span>
+                        <time class="card-date">{{ .Date.Format "2006-01-02" }}</time>
+                    </div>
+                    <h3 class="card-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    {{ with .Summary }}
+                    <p class="card-summary">{{ . | truncate 150 }}</p>
+                    {{ end }}
+                    {{ with .Params.tags }}
+                    <div class="card-tags">
+                        {{ range first 3 . }}
+                        <span class="tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </article>
+                {{ end }}
+            </div>
+            
+            <div class="view-more">
+                <a href="/work/" class="btn-link">View All Work</a>
+                <a href="/posts/" class="btn-link">View All Posts</a>
+            </div>
+        </section>
+    </div>
+</div>
+{{ end }}

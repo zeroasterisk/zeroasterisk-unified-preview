@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="generator" content="Hugo 0.121.1">
+    
+    <title>Playing with Elixir is just FUN | Alan Blount | AI/ML Engineer at Google</title>
+    
+    
+    <meta name="description" content="AI/ML Engineer at Google working on agent systems, memory architectures, and LLMOps. Creator of Headroom and contributor to agentic runtimes.">
+    
+    
+    
+    <meta name="author" content="Alan Blount">
+    
+    
+    
+    <meta property="og:title" content="Playing with Elixir is just FUN">
+    <meta property="og:description" content="Elixir really is as nice as you&#39;ve been hearing - exploring functional programming paradigms">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zeroasterisk.com/2017/07/playing-with-elixir-is-just-fun/">
+    <meta property="og:site_name" content="Alan Blount | AI/ML Engineer at Google">
+    
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Playing with Elixir is just FUN">
+    <meta name="twitter:description" content="Elixir really is as nice as you&#39;ve been hearing - exploring functional programming paradigms">
+    
+    <meta name="twitter:creator" content="@zeroasterisk">
+    
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://zeroasterisk.com/favicon.ico">
+    
+    
+    
+    
+    
+    <link rel="canonical" href="https://zeroasterisk.com/2017/07/playing-with-elixir-is-just-fun/">
+    
+    
+    <link rel="stylesheet" href="https://zeroasterisk.com/css/main.css">
+    
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2011466-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-2011466-1');
+    </script>
+    
+</head>
+<body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="brand">
+                <a href="https://zeroasterisk.com/" class="brand-link">
+                    <strong>Alan Blount</strong>
+                    <span class="brand-subtitle">AI/ML Engineer at Google</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                
+                <a href="https://zeroasterisk.com/work/" class="nav-link">
+                    Work &amp; AI
+                </a>
+                
+                <a href="https://zeroasterisk.com/posts/" class="nav-link">
+                    Technical Posts
+                </a>
+                
+                <a href="https://zeroasterisk.com/personal/" class="nav-link">
+                    Personal
+                </a>
+                
+                <a href="https://zeroasterisk.com/about/" class="nav-link">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+    
+    <main>
+        
+<article class="single-content">
+    <div class="container">
+        <header class="content-header">
+            <div class="content-meta">
+                <span class="content-type">Posts</span>
+                <time class="content-date">July 10, 2017</time>
+                
+            </div>
+            
+            <h1 class="content-title">Playing with Elixir is just FUN</h1>
+            
+            
+            <p class="content-description">Elixir really is as nice as you&#39;ve been hearing - exploring functional programming paradigms</p>
+            
+            
+            
+            <div class="content-tags">
+                
+                <span class="tag">elixir</span>
+                
+                <span class="tag">functional-programming</span>
+                
+                <span class="tag">exploration</span>
+                
+                <span class="tag">learning</span>
+                
+            </div>
+            
+        </header>
+        
+        <div class="content-body">
+            <h1 id="playing-with-elixir-is-just-fun">Playing with Elixir is just FUN</h1>
+<p>I&rsquo;ve been using Elixir for a few weeks now, and I have to say - it really lives up to the hype. The functional programming paradigms, the actor model with OTP, and the fault-tolerant design make it a joy to work with.</p>
+<h2 id="what-makes-elixir-special">What Makes Elixir Special</h2>
+<p><strong>Pattern Matching</strong>: One of the most elegant features. Instead of complex conditionals, you can pattern match directly in function definitions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elixir" data-lang="elixir"><span style="display:flex;"><span><span style="color:#66d9ef">defmodule</span> <span style="color:#a6e22e">Calculator</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> add({<span style="color:#e6db74">:ok</span>, x}, {<span style="color:#e6db74">:ok</span>, y}), <span style="color:#e6db74">do</span>: {<span style="color:#e6db74">:ok</span>, x <span style="color:#f92672">+</span> y}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> add({<span style="color:#e6db74">:error</span>, _}, _), <span style="color:#e6db74">do</span>: {<span style="color:#e6db74">:error</span>, <span style="color:#e6db74">&#34;Invalid input&#34;</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> add(_, {<span style="color:#e6db74">:error</span>, _}), <span style="color:#e6db74">do</span>: {<span style="color:#e6db74">:error</span>, <span style="color:#e6db74">&#34;Invalid input&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p><strong>Pipe Operator</strong>: Data flows through transformations naturally:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elixir" data-lang="elixir"><span style="display:flex;"><span><span style="color:#e6db74">&#34;hello world&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">String</span><span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">Enum</span><span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">String</span><span style="color:#f92672">.</span>capitalize<span style="color:#f92672">/</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|&gt;</span> <span style="color:#a6e22e">Enum</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># =&gt; &#34;Hello World&#34;</span>
+</span></span></code></pre></div><p><strong>OTP (Open Telecom Platform)</strong>: Built-in supervision trees and fault tolerance that just work.</p>
+<h2 id="why-it-matters">Why It Matters</h2>
+<p>Coming from imperative languages, Elixir forces you to think differently about:</p>
+<ul>
+<li>State management (immutable by default)</li>
+<li>Error handling (let it crash philosophy)</li>
+<li>Concurrency (lightweight processes, not threads)</li>
+<li>System design (supervision trees)</li>
+</ul>
+<h2 id="real-world-impact">Real-World Impact</h2>
+<p>The fault tolerance isn&rsquo;t just theoretical. Elixir systems routinely achieve 99.9999999% (nine 9s) uptime. When a process crashes, the supervisor restarts it cleanly without affecting other parts of the system.</p>
+<p>This is exactly the kind of reliability we need for modern distributed systems. No more hunting down memory leaks or dealing with thread synchronization nightmares.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>I&rsquo;m planning to build a few more projects to really explore the ecosystem:</p>
+<ul>
+<li>Phoenix for web applications</li>
+<li>Nerves for embedded systems</li>
+<li>GenStage for data processing pipelines</li>
+</ul>
+<p>If you haven&rsquo;t tried Elixir yet, I highly recommend it. The learning curve is worth it for the paradigm shift alone.</p>
+
+        </div>
+        
+        
+    </div>
+</article>
+
+    </main>
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2026 Alan Blount. All rights reserved.</p>
+                <p class="footer-description">AI/ML Engineer at Google working on agent systems, memory architectures, and LLMOps. Creator of Headroom and contributor to agentic runtimes.</p>
+            </div>
+            
+            <div class="footer-links">
+                
+                <a href="https://github.com/zeroasterisk" target="_blank" rel="noopener" class="social-link">GitHub</a>
+                
+                
+                <a href="https://twitter.com/zeroasterisk" target="_blank" rel="noopener" class="social-link">Twitter</a>
+                
+                
+                <a href="https://linkedin.com/in/alanblount" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+                
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <script src="https://zeroasterisk.com/js/main.js"></script>
+</body>
+</html>
