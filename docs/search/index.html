@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="generator" content="Hugo 0.121.1">
+    
+    <title>Search | Alan Blount | AI/ML Engineer at Google</title>
+    
+    
+    <meta name="description" content="AI/ML Engineer at Google working on agent systems, memory architectures, and LLMOps. Creator of Headroom and contributor to agentic runtimes.">
+    
+    
+    
+    <meta name="author" content="Alan Blount">
+    
+    
+    
+    <meta property="og:title" content="Search">
+    <meta property="og:description" content="Search through all posts and articles">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zeroasterisk.github.io/zeroasterisk-unified-preview/search/">
+    <meta property="og:site_name" content="Alan Blount | AI/ML Engineer at Google">
+    
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Search">
+    <meta name="twitter:description" content="Search through all posts and articles">
+    
+    <meta name="twitter:creator" content="@zeroasterisk">
+    
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/favicon.ico">
+    
+    
+    
+    
+    
+    <link rel="canonical" href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/search/">
+    
+    
+    <link rel="stylesheet" href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/css/main.css">
+    
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2011466-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-2011466-1');
+    </script>
+    
+</head>
+<body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="brand">
+                <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/" class="brand-link">
+                    <strong>Alan Blount</strong>
+                    <span class="brand-subtitle">AI/ML Engineer at Google</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                
+                <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/posts/" class="nav-link">
+                    Tech
+                </a>
+                
+                <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/personal/" class="nav-link">
+                    Personal
+                </a>
+                
+                <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/about/" class="nav-link">
+                    About
+                </a>
+                
+                <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/search/" class="nav-link">
+                    Search
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+    
+    <main>
+        
+<div class="search-page">
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">Search</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search posts..." class="search-input">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </header>
+        
+        <div class="search-content">
+            <div id="searchIndex" style="display: none;">
+                
+                    
+                <div class="search-item" data-title="building agent memory systems at scale" data-content="building agent memory systems at scale working on ai agent systems at google has given me unique insights into what it takes to build memory architectures that work at planetary scale. here are some lessons learned from deploying agent memory systems in production.
+the memory challenge modern ai agents need to remember across conversations, learn from interactions, and maintain context about users, preferences, and ongoing tasks. but naive approaches to agent memory hit walls quickly:
+scale: millions of users, billions of interactions latency: sub-100ms retrieval requirements accuracy: false memories are worse than no memory privacy: user data isolation and security cost: storage and compute costs at scale architecture principles 1. hierarchical memory systems we&amp;rsquo;ve found success with multi-tier memory architectures:
+working memory (ms access) ├── conversation context ├── immediate user state └── active task context episodic memory (100ms access) ├── recent conversations ├── user preferences └── interaction patterns semantic memory (seconds access) ├── knowledge graphs ├── fact databases └── learned user models 2. embedding-based retrieval vector embeddings enable semantic search across memory:
+dense retrieval: find semantically similar past interactions hybrid search: combine vector similarity with metadata filtering continuous learning: update embeddings as user preferences evolve 3. memory consolidation like human sleep, agents need memory consolidation:
+class memoryconsolidator: def consolidate_daily(self, user_memories): # extract patterns from episodic memories patterns = self.extract_patterns(user_memories) # update semantic knowledge self.update_semantic_memory(patterns) # archive or compress old episodic memories self.archive_episodic_memories(user_memories) production challenges consistency at scale with distributed systems serving millions of agents:
+eventually consistent: memory updates propagate asynchronously conflict resolution: handle concurrent memory updates gracefully backup and recovery: memory loss breaks user experience privacy and security memory systems hold sensitive user data:
+data isolation: strict user boundary enforcement access controls: fine-grained permissions for memory access audit trails: track what memories were accessed when cost optimization memory costs scale with users and time:
+intelligent archiving: move cold memories to cheaper storage compression: reduce memory footprint without losing information garbage collection: remove memories that no longer provide value real-world results our agent memory systems now handle:
+10m&#43; active users with personalized memory sub-50ms p95 latency for memory retrieval 99.9% accuracy on memory recall tasks 60% reduction in repeated user explanations key insights start simple: basic key-value memory beats complex systems that don&amp;rsquo;t work user control: let users see and edit their agent&amp;rsquo;s memories graceful degradation: agents should work even when memory is unavailable continuous evaluation: memory quality metrics are critical what&amp;rsquo;s next the future of agent memory lies in:
+cross-agent learning: agents learning from each other&amp;rsquo;s experiences multimodal memory: storing and retrieving images, audio, and video causal reasoning: understanding cause-and-effect in memory temporal reasoning: better understanding of time and sequence building memory systems that work at google scale has taught me that the technical challenges are only half the battle. the other half is building systems that users can understand and trust with their personal information.
+note: technical details shared here reflect general industry knowledge and do not reveal any proprietary google technologies or methods.
+" data-tags="ai agents memory architecture google production">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/11/building-agent-memory-systems-at-scale/">Building Agent Memory Systems at Scale</a></h3>
+                    <div class="item-meta">
+                        <span class="item-type">Tech</span>
+                        <time>2024-11-20</time>
+                        
+                        <div class="item-tags">
+                            
+                            <span class="tag">ai</span>
+                            
+                            <span class="tag">agents</span>
+                            
+                            <span class="tag">memory</span>
+                            
+                            <span class="tag">architecture</span>
+                            
+                            <span class="tag">google</span>
+                            
+                            <span class="tag">production</span>
+                            
+                        </div>
+                        
+                    </div>
+                    <p class="item-summary">Building Agent Memory Systems at Scale Working on AI agent systems at Google has given me unique insights into what it takes to build memory architectures that work at planetary scale. Here are some …</p>
+                </div>
+                    
+                
+                    
+                <div class="search-item" data-title="headroom: context compression for ai applications" data-content="type: &amp;ldquo;posts&amp;rdquo; featured: true headroom: context compression for ai applications one of the biggest challenges in building production ai applications is managing context length effectively. as conversations grow longer, token costs increase exponentially, and eventually you hit context limits that break the experience entirely.
+the problem modern llms have impressive context windows - gpt-4 supports 128k tokens, claude-3 goes up to 200k. but in practice:
+cost scaling: token costs are linear with context length latency impact: longer contexts mean slower responses quality degradation: important information gets lost in the middle hard limits: eventually you hit the ceiling and conversations break the solution: intelligent compression headroom implements semantic context compression that:
+identifies key information using embedding similarity and importance scoring preserves conversation flow by maintaining temporal relationships compresses intelligently removing redundant information while keeping context maintains quality through careful prompt engineering and validation technical architecture class headroomcompressor: def __init__(self, target_ratio=0.3, preserve_recent=5): self.target_ratio = target_ratio self.preserve_recent = preserve_recent self.embedder = sentencetransformer(&amp;#39;all-minilm-l6-v2&amp;#39;) def compress(self, messages): # always preserve system prompt and recent messages recent_messages = messages[-self.preserve_recent:] compressible = messages[1:-self.preserve_recent] # calculate semantic importance scores importance_scores = self._calculate_importance(compressible) # select messages to keep based on importance and diversity kept_messages = self._select_messages( compressible, importance_scores, self.target_ratio ) return [messages[0]] &#43; kept_messages &#43; recent_messages results in production testing:
+70% reduction in context length on average 65% cost savings on conversation-heavy workloads 98% semantic preservation measured by embedding similarity zero conversation breaks from context limits in 6-month deployment open source headroom is available as an open source library that integrates with any llm provider. the compression algorithms are provider-agnostic and can be tuned for different use cases.
+github: github.com/zeroasterisk/headroom
+impact this work has enabled several production ai applications to scale cost-effectively while maintaining conversation quality. the techniques have been adopted by teams building chatbots, ai assistants, and automated support systems.
+" data-tags="ai llm context-compression optimization">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/01/headroom-context-compression-for-ai-applications/">Headroom: Context Compression for AI Applications</a></h3>
+                    <div class="item-meta">
+                        <span class="item-type">Tech</span>
+                        <time>2024-01-15</time>
+                        
+                        <div class="item-tags">
+                            
+                            <span class="tag">ai</span>
+                            
+                            <span class="tag">llm</span>
+                            
+                            <span class="tag">context-compression</span>
+                            
+                            <span class="tag">optimization</span>
+                            
+                        </div>
+                        
+                    </div>
+                    <p class="item-summary">type: &ldquo;posts&rdquo; featured: true Headroom: Context Compression for AI Applications One of the biggest challenges in building production AI applications is managing context length effectively. …</p>
+                </div>
+                    
+                
+                    
+                <div class="search-item" data-title="playing with elixir is just fun" data-content="playing with elixir is just fun i&amp;rsquo;ve been using elixir for a few weeks now, and i have to say - it really lives up to the hype. the functional programming paradigms, the actor model with otp, and the fault-tolerant design make it a joy to work with.
+what makes elixir special pattern matching: one of the most elegant features. instead of complex conditionals, you can pattern match directly in function definitions:
+defmodule calculator do def add({:ok, x}, {:ok, y}), do: {:ok, x &#43; y} def add({:error, _}, _), do: {:error, &amp;#34;invalid input&amp;#34;} def add(_, {:error, _}), do: {:error, &amp;#34;invalid input&amp;#34;} end pipe operator: data flows through transformations naturally:
+&amp;#34;hello world&amp;#34; |&amp;gt; string.split() |&amp;gt; enum.map(&amp;amp;string.capitalize/1) |&amp;gt; enum.join(&amp;#34; &amp;#34;) # =&amp;gt; &amp;#34;hello world&amp;#34; otp (open telecom platform): built-in supervision trees and fault tolerance that just work.
+why it matters coming from imperative languages, elixir forces you to think differently about:
+state management (immutable by default) error handling (let it crash philosophy) concurrency (lightweight processes, not threads) system design (supervision trees) real-world impact the fault tolerance isn&amp;rsquo;t just theoretical. elixir systems routinely achieve 99.9999999% (nine 9s) uptime. when a process crashes, the supervisor restarts it cleanly without affecting other parts of the system.
+this is exactly the kind of reliability we need for modern distributed systems. no more hunting down memory leaks or dealing with thread synchronization nightmares.
+next steps i&amp;rsquo;m planning to build a few more projects to really explore the ecosystem:
+phoenix for web applications nerves for embedded systems genstage for data processing pipelines if you haven&amp;rsquo;t tried elixir yet, i highly recommend it. the learning curve is worth it for the paradigm shift alone.
+" data-tags="elixir functional-programming exploration learning">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/">Playing with Elixir is just FUN</a></h3>
+                    <div class="item-meta">
+                        <span class="item-type">Tech</span>
+                        <time>2017-07-10</time>
+                        
+                        <div class="item-tags">
+                            
+                            <span class="tag">elixir</span>
+                            
+                            <span class="tag">functional-programming</span>
+                            
+                            <span class="tag">exploration</span>
+                            
+                            <span class="tag">learning</span>
+                            
+                        </div>
+                        
+                    </div>
+                    <p class="item-summary">Playing with Elixir is just FUN I&rsquo;ve been using Elixir for a few weeks now, and I have to say - it really lives up to the hype. The functional programming paradigms, the actor model with OTP, …</p>
+                </div>
+                    
+                
+                    
+                <div class="search-item" data-title="2017 memorial day homework" data-content="2017 memorial day homework i have made the formal household declaration that all screen time will be matched, hour-for-hour with project time.
+yesterday we cleaned the 1st floor, mopped and everything. today we went grocery shopping, made lunch, and then started on homework time.
+to say that i am unpopular here, would be an understatement. but both of our kids will benefit from some extra assignments. our education system is super lax, and a bit of supplemental assignment seems like a good idea.
+the screen time equation the rule is simple: for every hour of screens (tv, ipad, games), they need to do an hour of productive project work. this includes:
+academic work: math practice, reading, writing life skills: cooking, cleaning, organizing creative projects: art, building, music physical activity: sports, bike riding, hiking why this matters i&amp;rsquo;ve noticed that unlimited screen time turns them into zombies. they lose interest in everything else - books, outdoor play, building with legos, even talking to us at dinner.
+the 1:1 ratio forces them to be intentional about screen time. if they really want to watch that show or play that game, they need to earn it.
+early results day 1: massive resistance. lots of complaints about how &amp;ldquo;unfair&amp;rdquo; this is.
+day 2: started negotiating. &amp;ldquo;can we do the dishes and vacuum to get extra screen time?&amp;rdquo;
+day 3: actually asked if they could read for an hour to &amp;ldquo;bank&amp;rdquo; screen time for later.
+the shift in thinking is already happening.
+learning moments what i didn&amp;rsquo;t expect was how much i would learn from this:
+they&amp;rsquo;re actually capable of way more than i give them credit for when they&amp;rsquo;re not overstimulated by screens, they find creative ways to entertain themselves they take pride in completing tasks when there&amp;rsquo;s a clear reward structure the long game this isn&amp;rsquo;t about being anti-technology. i work in tech, and screens are part of modern life. but i want them to understand that consumption needs to be balanced with creation.
+the goal is to build habits now that will serve them as adults:
+time management delayed gratification finding satisfaction in productive work appreciating entertainment more when it&amp;rsquo;s earned will report back on how this experiment goes over the summer&amp;hellip;
+" data-tags="parenting education balance family-time">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/personal/2017/05/2017-memorial-day-homework/">2017 Memorial Day Homework</a></h3>
+                    <div class="item-meta">
+                        <span class="item-type">Personal</span>
+                        <time>2017-05-29</time>
+                        
+                        <div class="item-tags">
+                            
+                            <span class="tag">parenting</span>
+                            
+                            <span class="tag">education</span>
+                            
+                            <span class="tag">balance</span>
+                            
+                            <span class="tag">family-time</span>
+                            
+                        </div>
+                        
+                    </div>
+                    <p class="item-summary">2017 Memorial Day Homework I have made the formal household declaration that all screen time will be matched, hour-for-hour with project time.
+Yesterday we cleaned the 1st floor, mopped and …</p>
+                </div>
+                    
+                
+                    
+                
+                    
+                
+            </div>
+            
+            <div id="noResults" style="display: none;">
+                <p>No posts found matching your search.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const searchItems = document.querySelectorAll('.search-item');
+    const noResults = document.getElementById('noResults');
+    
+    function performSearch(query) {
+        if (query.length === 0) {
+            searchResults.innerHTML = '';
+            noResults.style.display = 'none';
+            return;
+        }
+        
+        const results = [];
+        const searchTerm = query.toLowerCase();
+        
+        searchItems.forEach(item => {
+            const title = item.dataset.title;
+            const content = item.dataset.content;
+            const tags = item.dataset.tags;
+            
+            if (title.includes(searchTerm) || content.includes(searchTerm) || tags.includes(searchTerm)) {
+                results.push(item.cloneNode(true));
+            }
+        });
+        
+        searchResults.innerHTML = '';
+        
+        if (results.length > 0) {
+            results.forEach(result => {
+                searchResults.appendChild(result);
+            });
+            noResults.style.display = 'none';
+        } else {
+            noResults.style.display = 'block';
+        }
+    }
+    
+    searchInput.addEventListener('input', function() {
+        performSearch(this.value);
+    });
+});
+</script>
+
+    </main>
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2026 Alan Blount. All rights reserved.</p>
+                <p class="footer-description">AI/ML Engineer at Google working on agent systems, memory architectures, and LLMOps. Creator of Headroom and contributor to agentic runtimes.</p>
+            </div>
+            
+            <div class="footer-links">
+                
+                <a href="https://github.com/zeroasterisk" target="_blank" rel="noopener" class="social-link">GitHub</a>
+                
+                
+                <a href="https://twitter.com/zeroasterisk" target="_blank" rel="noopener" class="social-link">Twitter</a>
+                
+                
+                <a href="https://linkedin.com/in/alanblount" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+                
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <script src="https://zeroasterisk.github.io/zeroasterisk-unified-preview/js/main.js"></script>
+</body>
+</html>

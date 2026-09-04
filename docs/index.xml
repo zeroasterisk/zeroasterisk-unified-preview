@@ -10,17 +10,17 @@
     <atom:link href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Agent Memory Systems at Scale</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/work/building-agent-memory-systems-at-scale/</link>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/11/building-agent-memory-systems-at-scale/</link>
       <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/work/building-agent-memory-systems-at-scale/</guid>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/11/building-agent-memory-systems-at-scale/</guid>
       <description>Building Agent Memory Systems at Scale Working on AI agent systems at Google has given me unique insights into what it takes to build memory architectures that work at planetary scale. Here are some lessons learned from deploying agent memory systems in production.&#xA;The Memory Challenge Modern AI agents need to remember across conversations, learn from interactions, and maintain context about users, preferences, and ongoing tasks. But naive approaches to agent memory hit walls quickly:</description>
     </item>
     <item>
       <title>Headroom: Context Compression for AI Applications</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/work/headroom-context-compression-for-ai-applications/</link>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/01/headroom-context-compression-for-ai-applications/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/work/headroom-context-compression-for-ai-applications/</guid>
-      <description>Headroom: Context Compression for AI Applications One of the biggest challenges in building production AI applications is managing context length effectively. As conversations grow longer, token costs increase exponentially, and eventually you hit context limits that break the experience entirely.&#xA;The Problem Modern LLMs have impressive context windows - GPT-4 supports 128k tokens, Claude-3 goes up to 200k. But in practice:&#xA;Cost scaling: Token costs are linear with context length Latency impact: Longer contexts mean slower responses Quality degradation: Important information gets lost in the middle Hard limits: Eventually you hit the ceiling and conversations break The Solution: Intelligent Compression Headroom implements semantic context compression that:</description>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/01/headroom-context-compression-for-ai-applications/</guid>
+      <description>type: &amp;ldquo;posts&amp;rdquo; featured: true Headroom: Context Compression for AI Applications One of the biggest challenges in building production AI applications is managing context length effectively. As conversations grow longer, token costs increase exponentially, and eventually you hit context limits that break the experience entirely.&#xA;The Problem Modern LLMs have impressive context windows - GPT-4 supports 128k tokens, Claude-3 goes up to 200k. But in practice:&#xA;Cost scaling: Token costs are linear with context length Latency impact: Longer contexts mean slower responses Quality degradation: Important information gets lost in the middle Hard limits: Eventually you hit the ceiling and conversations break The Solution: Intelligent Compression Headroom implements semantic context compression that:</description>
     </item>
     <item>
       <title>Playing with Elixir is just FUN</title>
@@ -41,7 +41,14 @@
       <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/pages/about/</guid>
-      <description>About Alan Blount I&amp;rsquo;m an AI/ML Engineer at Google in Boulder, Colorado, where I work on cutting-edge agent systems, memory architectures, and LLMOps solutions. My focus is on building the next generation of intelligent systems that can think, learn, and adapt.&#xA;Professional Background At Google, I&amp;rsquo;m deeply involved in:&#xA;Agent Memory Systems: Designing and implementing memory architectures for AI agents LLMOps Infrastructure: Building robust systems for deploying and managing large language models Agentic Runtimes: Contributing to frameworks that enable autonomous AI agents Open Source &amp;amp; Community I&amp;rsquo;m the creator of Headroom, a context compression system for AI applications, and actively contribute to various agentic runtime projects including:</description>
+      <description>About Alan Blount I&amp;rsquo;m an AI/ML Engineer at Google in Boulder, Colorado, working on cutting-edge generative AI systems and agent memory architectures. I&amp;rsquo;ve been at Google for several years, focusing on building the infrastructure and tools that power the next generation of intelligent systems.&#xA;Current Work at Google At Google, I&amp;rsquo;m deeply involved in:&#xA;Generative AI Systems: Building and deploying large-scale AI applications Agent Memory Architectures: Designing memory systems that help AI agents remember and learn Memory Bank Platforms: Contributing to Gemini Enterprise Agent Platform Memory Bank deployment Production AI Infrastructure: Scaling AI systems to handle millions of users Open Source &amp;amp; Community I believe in giving back to the developer community through open source contributions:</description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/search/</guid>
+      <description>Search Posts Use the search box below to find specific posts by title, content, or tags.</description>
     </item>
   </channel>
 </rss>

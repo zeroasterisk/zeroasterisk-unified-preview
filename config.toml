@@ -17,38 +17,35 @@ buildFuture = false
 # Permalinks - clean URLs
 [permalinks]
   posts = "/:year/:month/:slug/"
-  work = "/work/:slug/"
   personal = "/personal/:year/:month/:slug/"
 
 # Taxonomies
 [taxonomies]
-  category = "categories"
   tag = "tags"
-  topic = "topics"
-
+  
 # Main menu
 [[menu.main]]
-  identifier = "work"
-  name = "Work & AI"
-  url = "/work/"
-  weight = 10
-
-[[menu.main]]
-  identifier = "posts"
-  name = "Technical Posts"
+  identifier = "tech"
+  name = "Tech"
   url = "/posts/"
-  weight = 20
+  weight = 10
 
 [[menu.main]]
   identifier = "personal"
   name = "Personal"
   url = "/personal/"
-  weight = 30
+  weight = 20
 
 [[menu.main]]
   identifier = "about"
   name = "About"
   url = "/about/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
   weight = 40
 
 # Site parameters

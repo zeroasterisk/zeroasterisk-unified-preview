@@ -3,8 +3,7 @@ title: "Building Agent Memory Systems at Scale"
 date: 2024-11-20
 description: "Lessons learned deploying memory architectures for AI agents in production at Google"
 tags: ["ai", "agents", "memory", "architecture", "google", "production"]
-topics: ["AI Engineering", "Agent Systems", "Memory Architecture"]
-type: "work"
+type: "posts"
 featured: true
 ---
 

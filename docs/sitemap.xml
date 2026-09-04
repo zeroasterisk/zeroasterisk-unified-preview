@@ -2,16 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/agent-systems/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/agents/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/ai/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/ai-engineering/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/</loc>
@@ -20,7 +14,7 @@
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/architecture/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/work/building-agent-memory-systems-at-scale/</loc>
+    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/11/building-agent-memory-systems-at-scale/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/google/</loc>
@@ -29,31 +23,22 @@
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/memory/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/memory-architecture/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/production/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/</loc>
-    <lastmod>2024-11-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/work/</loc>
+    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/posts/</loc>
     <lastmod>2024-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/context-compression/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/work/headroom-context-compression-for-ai-applications/</loc>
+    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/01/headroom-context-compression-for-ai-applications/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/llm/</loc>
-    <lastmod>2024-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/llmops/</loc>
     <lastmod>2024-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/optimization/</loc>
@@ -74,15 +59,6 @@
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/programming-languages/</loc>
-    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/software-development/</loc>
-    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/posts/</loc>
-    <lastmod>2017-07-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/personal/2017/05/2017-memorial-day-homework/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -92,16 +68,10 @@
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/education/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/education/</loc>
-    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/family-time/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/parenting/</loc>
-    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/topics/parenting/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/personal/</loc>
@@ -109,8 +79,8 @@
   </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/pages/about/</loc>
   </url><url>
-    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/categories/</loc>
-  </url><url>
     <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/pages/</loc>
+  </url><url>
+    <loc>https://zeroasterisk.github.io/zeroasterisk-unified-preview/search/</loc>
   </url>
 </urlset>

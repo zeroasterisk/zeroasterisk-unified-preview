@@ -3,7 +3,6 @@ title: "Playing with Elixir is just FUN"
 date: 2017-07-10
 description: "Elixir really is as nice as you've been hearing - exploring functional programming paradigms"
 tags: ["elixir", "functional-programming", "exploration", "learning"]
-topics: ["Programming Languages", "Software Development"]
 type: "posts"
 ---
 

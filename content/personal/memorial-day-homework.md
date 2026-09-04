@@ -3,7 +3,6 @@ title: "2017 Memorial Day Homework"
 date: 2017-05-29
 description: "Screen time balanced with project time - teaching kids the value of productive work"
 tags: ["parenting", "education", "balance", "family-time"]
-topics: ["Parenting", "Education"]
 type: "personal"
 ---
 

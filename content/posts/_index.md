@@ -1,7 +1,7 @@
 ---
-title: "Technical Posts"
-description: "Deep technical content on AI, ML, software engineering, and developer tools"
-type: "posts"
+title: "Work & AI"
+description: "Professional work, AI projects, and technical initiatives"
+type: "work"
 ---
 
-Technical articles covering AI/ML engineering, software development, DevOps, and emerging technologies.
+This section highlights my professional work in AI/ML engineering, agent systems, and technical projects at Google and in the open source community.

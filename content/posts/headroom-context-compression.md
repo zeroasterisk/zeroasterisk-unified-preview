@@ -3,8 +3,8 @@ title: "Headroom: Context Compression for AI Applications"
 date: 2024-01-15
 description: "Building intelligent context compression to maximize LLM conversation length and reduce costs"
 tags: ["ai", "llm", "context-compression", "optimization"]
-topics: ["AI Engineering", "LLMOps"]
-type: "work"
+---
+type: "posts"
 featured: true
 ---
 
