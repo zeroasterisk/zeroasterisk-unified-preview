@@ -1,7 +1,7 @@
 ---
 title: "CoreOS and Docker great presentation"
 date: 2014-10-21
-tags: ['docker', 'coreos', 'containers', 'devops']
+tags: ["docker", "coreos", "containers", "devops"]
 type: "posts"
 ---
 

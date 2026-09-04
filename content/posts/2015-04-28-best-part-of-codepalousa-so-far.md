@@ -1,7 +1,7 @@
 ---
 title: "Best part of CodepaLOUsa so far"
 date: 2015-04-28
-tags: ['conference', 'networking', 'javascript']
+tags: ["conference", "networking", "javascript"]
 type: "posts"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Life Changingly Good TED Radio Hour"
 date: 2014-10-14
-tags: ['creativity', 'parenting', 'learning']
+tags: ["creativity", "parenting", "learning"]
 type: "personal"
 ---
 

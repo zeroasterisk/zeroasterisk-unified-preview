@@ -1,1 +1,138 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Alan Blount | AI/ML Engineer at Google</title><link>https://zeroasterisk.com/tags/</link><description>Recent content in Tags on Alan Blount | AI/ML Engineer at Google</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://zeroasterisk.com/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>agents</title><link>https://zeroasterisk.com/tags/agents/</link><pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/agents/</guid><description/></item><item><title>ai</title><link>https://zeroasterisk.com/tags/ai/</link><pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/ai/</guid><description/></item><item><title>architecture</title><link>https://zeroasterisk.com/tags/architecture/</link><pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/architecture/</guid><description/></item><item><title>google</title><link>https://zeroasterisk.com/tags/google/</link><pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/google/</guid><description/></item><item><title>memory</title><link>https://zeroasterisk.com/tags/memory/</link><pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/memory/</guid><description/></item><item><title>production</title><link>https://zeroasterisk.com/tags/production/</link><pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/production/</guid><description/></item><item><title>context-compression</title><link>https://zeroasterisk.com/tags/context-compression/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/context-compression/</guid><description/></item><item><title>llm</title><link>https://zeroasterisk.com/tags/llm/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/llm/</guid><description/></item><item><title>optimization</title><link>https://zeroasterisk.com/tags/optimization/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/optimization/</guid><description/></item><item><title>elixir</title><link>https://zeroasterisk.com/tags/elixir/</link><pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/elixir/</guid><description/></item><item><title>exploration</title><link>https://zeroasterisk.com/tags/exploration/</link><pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/exploration/</guid><description/></item><item><title>functional-programming</title><link>https://zeroasterisk.com/tags/functional-programming/</link><pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/functional-programming/</guid><description/></item><item><title>learning</title><link>https://zeroasterisk.com/tags/learning/</link><pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/learning/</guid><description/></item><item><title>balance</title><link>https://zeroasterisk.com/tags/balance/</link><pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/balance/</guid><description/></item><item><title>education</title><link>https://zeroasterisk.com/tags/education/</link><pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/education/</guid><description/></item><item><title>family-time</title><link>https://zeroasterisk.com/tags/family-time/</link><pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/family-time/</guid><description/></item><item><title>parenting</title><link>https://zeroasterisk.com/tags/parenting/</link><pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate><guid>https://zeroasterisk.com/tags/parenting/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Alan Blount | AI/ML Engineer at Google</title>
+    <link>https://zeroasterisk.com/tags/</link>
+    <description>Recent content in Tags on Alan Blount | AI/ML Engineer at Google</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://zeroasterisk.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>balance</title>
+      <link>https://zeroasterisk.com/tags/balance/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/balance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>education</title>
+      <link>https://zeroasterisk.com/tags/education/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>family-time</title>
+      <link>https://zeroasterisk.com/tags/family-time/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/family-time/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>parenting</title>
+      <link>https://zeroasterisk.com/tags/parenting/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/parenting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>elixir</title>
+      <link>https://zeroasterisk.com/tags/elixir/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/elixir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>learning</title>
+      <link>https://zeroasterisk.com/tags/learning/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>machine-learning</title>
+      <link>https://zeroasterisk.com/tags/machine-learning/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>conference</title>
+      <link>https://zeroasterisk.com/tags/conference/</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/conference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>javascript</title>
+      <link>https://zeroasterisk.com/tags/javascript/</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>networking</title>
+      <link>https://zeroasterisk.com/tags/networking/</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>containers</title>
+      <link>https://zeroasterisk.com/tags/containers/</link>
+      <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>coreos</title>
+      <link>https://zeroasterisk.com/tags/coreos/</link>
+      <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/coreos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>devops</title>
+      <link>https://zeroasterisk.com/tags/devops/</link>
+      <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>docker</title>
+      <link>https://zeroasterisk.com/tags/docker/</link>
+      <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>creativity</title>
+      <link>https://zeroasterisk.com/tags/creativity/</link>
+      <pubDate>Tue, 14 Oct 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/creativity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>cordova</title>
+      <link>https://zeroasterisk.com/tags/cordova/</link>
+      <pubDate>Tue, 09 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/cordova/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>meteorjs</title>
+      <link>https://zeroasterisk.com/tags/meteorjs/</link>
+      <pubDate>Tue, 09 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/meteorjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>mobile</title>
+      <link>https://zeroasterisk.com/tags/mobile/</link>
+      <pubDate>Tue, 09 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.com/tags/mobile/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
