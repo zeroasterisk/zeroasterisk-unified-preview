@@ -6,8 +6,22 @@
     <description>Recent content in javascript on Alan Blount | AI/ML Engineer at Google</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jun 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PDF.js UI - Simple Proof of Concept</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/pdf.js-ui-simple-proof-of-concept/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/pdf.js-ui-simple-proof-of-concept/</guid>
+      <description>PDF.js UI - Simple Proof of Concept Working on a simple proof of concept for PDF.js integration with a custom UI layer.&#xA;More details coming soon&amp;hellip;</description>
+    </item>
+    <item>
+      <title>Meteor 1.5 ~ Bundle Optimization &#43; Examples</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/05/meteor-1.5-~-bundle-optimization--examples/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/05/meteor-1.5-~-bundle-optimization--examples/</guid>
+      <description>&lt;p&gt;I have been playing with &lt;a href=&#34;https://meteor.com/&#34;&gt;Meteor&lt;/a&gt; 1.5 and it&amp;rsquo;s dynamic imports,&#xA;which can be used to reduce the amount of javascript code sent to the browser.&lt;/p&gt;&#xA;&lt;p&gt;This article is a deep dive into how to profile and optimize your client side code&#xA;to make smarter use of the new dynamic imports&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Which will make &lt;strong&gt;meteor load faster for your users&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Best part of CodepaLOUsa so far</title>
       <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2015/04/best-part-of-codepalousa-so-far/</link>

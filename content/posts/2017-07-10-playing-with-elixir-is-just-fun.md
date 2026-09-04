@@ -1,7 +1,7 @@
 ---
 title: "Playing with Elixir is just FUN"
 date: 2017-07-10
-tags: []
+tags: ["elixir", "functional-programming", "erlang", "development", "tech", "programming-languages"]
 type: "posts"
 ---
 

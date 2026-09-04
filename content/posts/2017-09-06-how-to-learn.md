@@ -1,7 +1,7 @@
 ---
-title: "2017 09 06 How To Learn"
+title: "How To Learn"
 date: 2017-09-06
-tags: []
+tags: ["learning", "education", "productivity", "research", "personal-development"]
 type: "posts"
 ---
 

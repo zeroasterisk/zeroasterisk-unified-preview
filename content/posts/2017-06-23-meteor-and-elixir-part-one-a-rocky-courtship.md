@@ -1,7 +1,7 @@
 ---
 title: "Meteor and Elixir (part one) A Rocky Courtship"
 date: 2017-06-23
-tags: []
+tags: ["meteor", "elixir", "mongodb", "erlang", "development", "integration", "tech"]
 type: "posts"
 ---
 

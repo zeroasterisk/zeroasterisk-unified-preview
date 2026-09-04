@@ -13,7 +13,7 @@
       <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/</guid>
-      <description>Playing with Elixir is just FUN I&amp;rsquo;ve been using Elixir for a few weeks now, and I have to say - it really lives up to the hype. The functional programming paradigms, the actor model with OTP, and the fault-tolerant design make it a joy to work with.&#xA;What Makes Elixir Special Pattern Matching: One of the most elegant features. Instead of complex conditionals, you can pattern match directly in function definitions:</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using Elixir for a few weeks now, sometimes&#xA;&lt;a href=&#34;https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/meteor-and-elixir-rocky-courtship/&#34;&gt;forcing it to play nice with Mongodb/Meteor&lt;/a&gt;&#xA;, which it doesn&amp;rsquo;t really want to do.&#xA;Sometimes with Posgres &lt;em&gt;(which it loves)&lt;/em&gt;.&#xA;Sometimes just plain ole&amp;rsquo; Elixir with no persistance.&lt;/p&gt;&#xA;&lt;p&gt;It &lt;em&gt;is&lt;/em&gt; realllllly fun!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -79,6 +79,10 @@
                     About
                 </a>
                 
+                <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/" class="nav-link">
+                    Tags
+                </a>
+                
                 <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/search/" class="nav-link">
                     Search
                 </a>
@@ -104,17 +108,31 @@
             <div id="searchIndex" style="display: none;">
                 
                     
-                <div class="search-item" data-title="2017 09 06 how to learn" data-content="my buddy arthur recently shared this with me, his synthesis of research he&amp;rsquo;s been doing on how to be a more effective learner.
+                <div class="search-item" data-title="how to learn" data-content="my buddy arthur recently shared this with me, his synthesis of research he&amp;rsquo;s been doing on how to be a more effective learner.
 stay engaged choose to find the information useful be invested in tackling difficult problems try to anticipate what&amp;rsquo;s next identify big idea use them as anchor to connect details periodically summarize what you&amp;rsquo;ve heard keep conclusions tentative evaluate evidence, don&amp;rsquo;t accept it at face value ask followup questions don&amp;rsquo;t get derailed concentrate on the message, not the messenger don&amp;rsquo;t get thrown off by emotionally charged language don&amp;rsquo;t stop listening when you disagree humanize the presenter, get to know them adjust note taking to the presenter&amp;rsquo;s patterns seriously - how great is that?
 the best one is &amp;ldquo;choose to find it useful&amp;rdquo; which is so simple and yet so important.
 our perspectives and attitudes affect so many things - even something as simple as how much we are going to learn or retain or even understand.
 so, next time you sit down to study or hone some skill or meet a new co-worker and want to remember their name&amp;hellip; make just a bit more effort and be more engaged.
 (i&amp;rsquo;m tryin&amp;rsquo;)
-" data-tags="">
-                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/09/2017-09-06-how-to-learn/">2017 09 06 How To Learn</a></h3>
+" data-tags="learning education productivity research personal-development">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/09/how-to-learn/">How To Learn</a></h3>
                     <div class="item-meta">
                         <span class="item-type">Tech</span>
                         <time>2017-09-06</time>
+                        
+                        <div class="item-tags">
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/learning/" class="tag">learning</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/education/" class="tag">education</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/productivity/" class="tag">productivity</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/research/" class="tag">research</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/personal-development/" class="tag">personal-development</a>
+                            
+                        </div>
                         
                     </div>
                     <p class="item-summary">My buddy Arthur recently shared this with me, his synthesis of research he&rsquo;s been doing on how to be a more effective learner.
@@ -166,11 +184,27 @@ bascially - even for web tools - for most of the work i&amp;rsquo;m doing, i set
 quality &amp;amp; maintainability as you can tell, i&amp;rsquo;ve drunk the kool-aid a bit. i&amp;rsquo;m happy with elixir.
 i&amp;rsquo;m not as fast with it as i expected to be. there is a lot to (re)learn, but more-to-the fact, elixir kindof forces you to be a better developer. the strong discouragement of if conditionals, and to take advantage of pattern matching, helps me to take fewer shortcuts &amp;ndash; no procedural sprawl, all small functions. the great testing experience encourages tdd and more test coverage. the great docs encourages you to be nice to future developers.
 i have a feeling that the stuff i build in elixir will be stable and solid for a while and a lot easier to maintain.
-" data-tags="">
+" data-tags="elixir functional-programming erlang development tech programming-languages">
                     <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/">Playing with Elixir is just FUN</a></h3>
                     <div class="item-meta">
                         <span class="item-type">Tech</span>
                         <time>2017-07-10</time>
+                        
+                        <div class="item-tags">
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/elixir/" class="tag">elixir</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/functional-programming/" class="tag">functional-programming</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/erlang/" class="tag">erlang</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/development/" class="tag">development</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/tech/" class="tag">tech</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/programming-languages/" class="tag">programming-languages</a>
+                            
+                        </div>
                         
                     </div>
                     <p class="item-summary"><p>I&rsquo;ve been using Elixir for a few weeks now, sometimes
@@ -223,11 +257,29 @@ edit config/test.exs and change the config at the bottom to be something like:
 $ mix test compiling 12 files (.ex) generated e2mapi app ** (runtimeerror) cannot configure sandbox with pool nil. to use the sql sandbox, configure your repository pool as: pool: ecto.adapters.sql.sandbox (ecto) lib/ecto/adapters/sql/sandbox.ex:429: ecto.adapters.sql.sandbox.mode/2 (elixir) lib/code.ex:370: code.require_file/2 (elixir) lib/enum.ex:645: enum.&amp;#34;-each/2-lists^foreach/1-0-&amp;#34;/2 (elixir) lib/enum.ex:645: enum.each/2 (mix) lib/mix/tasks/test.ex:229: mix.tasks.test.run/1 after doing some searching, i found &amp;ldquo;sql sandbox&amp;rdquo; code in several test files.
 $ ag sandbox test/support/channel_case.ex 30: :ok = ecto.adapters.sql.sandbox.checkout(e2mapi.repo) 32: ecto.adapters.sql.sandbox.mode(e2mapi.repo, {:shared, self()}) test/support/conn_case.ex 31: :ok = ecto.adapters.sql.sandbox.checkout(e2mapi.repo) 33: ecto.adapters.sql.sandbox.mode(e2mapi.repo, {:shared, self()}) test/support/data_case.ex 29: :ok = ecto.adapters.sql.sandbox.checkout(e2mapi.repo) 32: ecto.adapters.sql.sandbox.mode(e2mapi.repo, {:shared, self()}) test/test_helper.exs 3:ecto.adapters.sql.sandbox.mode(e2mapi.repo, :manual) i commented out the relevant sections and now mix test shows me green lights and my world is happy.
 $ mix test compiling 3 files (.ex) ... finished in 0.03 seconds 3 tests, 0 failures randomized with seed 649726 build our application todo&amp;hellip; this is a work in progress&amp;hellip; i will come back with a part 2, soon.
-" data-tags="">
+" data-tags="meteor elixir mongodb erlang development integration tech">
                     <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/meteor-and-elixir-part-one-a-rocky-courtship/">Meteor and Elixir (part one) A Rocky Courtship</a></h3>
                     <div class="item-meta">
                         <span class="item-type">Tech</span>
                         <time>2017-06-23</time>
+                        
+                        <div class="item-tags">
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/meteor/" class="tag">meteor</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/elixir/" class="tag">elixir</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/mongodb/" class="tag">mongodb</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/erlang/" class="tag">erlang</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/development/" class="tag">development</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/integration/" class="tag">integration</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/tech/" class="tag">tech</a>
+                            
+                        </div>
                         
                     </div>
                     <p class="item-summary"><p>I have been watching Elixir for almost 2 years now, and debating if it&rsquo;s mature enough for me to invest in.</p>
@@ -236,14 +288,35 @@ $ mix test compiling 3 files (.ex) ... finished in 0.03 seconds 3 tests, 0 failu
                     
                 
                     
-                <div class="search-item" data-title="2017 06 14 pdfjs ui simple proof of concept" data-content="" data-tags="">
-                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/2017-06-14-pdfjs-ui-simple-proof-of-concept/">2017 06 14 Pdfjs Ui Simple Proof Of Concept</a></h3>
+                <div class="search-item" data-title="pdf.js ui - simple proof of concept" data-content="pdf.js ui - simple proof of concept working on a simple proof of concept for pdf.js integration with a custom ui layer.
+more details coming soon&amp;hellip;
+" data-tags="pdf javascript ui prototype tech development pdfjs">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/pdf.js-ui-simple-proof-of-concept/">PDF.js UI - Simple Proof of Concept</a></h3>
                     <div class="item-meta">
                         <span class="item-type">Tech</span>
                         <time>2017-06-14</time>
                         
+                        <div class="item-tags">
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/pdf/" class="tag">pdf</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/javascript/" class="tag">javascript</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/ui/" class="tag">ui</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/prototype/" class="tag">prototype</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/tech/" class="tag">tech</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/development/" class="tag">development</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/pdfjs/" class="tag">pdfjs</a>
+                            
+                        </div>
+                        
                     </div>
-                    <p class="item-summary"></p>
+                    <p class="item-summary">PDF.js UI - Simple Proof of Concept Working on a simple proof of concept for PDF.js integration with a custom UI layer.
+More details coming soon&hellip;</p>
                 </div>
                     
                 
@@ -332,11 +405,29 @@ also a huge thanks to jesse for the bundle-visualizer and all your other meteor 
 definitely read the meteor blog post and maybe the huge pull request for information about dynamic imports.
 i&amp;rsquo;ve also played with code from meteor&amp;rsquo;s react-loadable example which helped me to understand dynamic imports.
 other good reading, webpack&amp;rsquo;s dynamic import docs are useful too.
-" data-tags="">
+" data-tags="meteor javascript optimization bundle-size performance tech development">
                     <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/05/meteor-1.5-~-bundle-optimization--examples/">Meteor 1.5 ~ Bundle Optimization &#43; Examples</a></h3>
                     <div class="item-meta">
                         <span class="item-type">Tech</span>
                         <time>2017-05-31</time>
+                        
+                        <div class="item-tags">
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/meteor/" class="tag">meteor</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/javascript/" class="tag">javascript</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/optimization/" class="tag">optimization</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/bundle-size/" class="tag">bundle-size</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/performance/" class="tag">performance</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/tech/" class="tag">tech</a>
+                            
+                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/development/" class="tag">development</a>
+                            
+                        </div>
                         
                     </div>
                     <p class="item-summary"><p>I have been playing with <a href="https://meteor.com/">Meteor</a> 1.5 and it&rsquo;s dynamic imports,
