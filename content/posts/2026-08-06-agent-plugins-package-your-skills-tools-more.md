@@ -2,7 +2,7 @@
 title: "Agent Plugins Package Your Skills, Tools, and More"
 date: 2026-08-06
 description: "Google's new vendor-neutral standard for packaging Agent Skills and MCP servers into portable, interoperable AI tools"
-tags: ["ai", "google", "agent-plugins", "mcp", "developer-tools", "cross-post"]
+tags: ["ai", "google", "agent-plugins", "mcp", "developer-tools", "cross-post", "2026"]
 type: "posts"
 canonical_url: "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/"
 external_source: "Google Developers Blog"
