@@ -12,44 +12,34 @@ from pathlib import Path
 
 def parse_frontmatter(content):
     """Parse YAML frontmatter from markdown content"""
-    if not content.startswith('---'):
-        return {}, content
-    
-    try:
-        _, frontmatter_str, body = content.split('---', 2)
-        frontmatter = yaml.safe_load(frontmatter_str.strip())
-        return frontmatter, body.strip()
-    except:
-        return {}, content
+    # Handle both --- and +++ for frontmatter delimiters
+    if content.startswith('---') or content.startswith('+++'):
+        delimiter = content[:3]
+        parts = content.split(delimiter, 2)
+        if len(parts) == 3:
+            try:
+                frontmatter = yaml.safe_load(parts[1].strip())
+                body = parts[2].strip()
+                return frontmatter if frontmatter else {}, body
+            except yaml.YAMLError:
+                print(f"Warning: Could not parse YAML frontmatter for a post. Skipping... ")
+                return {}, content
+    return {}, content
 
 def categorize_content(frontmatter, title, tags, categories):
-    """Determine if content should go to work, posts, or personal"""
-    
-    # Work-related keywords
-    work_keywords = ['ai', 'ml', 'agent', 'memory', 'llm', 'google', 'production', 
-                     'engineering', 'system', 'architecture', 'scale', 'devops',
-                     'programming', 'code', 'technical', 'development', 'algorithm']
-    
-    # Personal keywords  
-    personal_keywords = ['family', 'personal', 'kids', 'anita', 'penelope', 
-                        'parenting', 'life', 'home', 'vacation', 'holiday']
+    """Determine if content should go to posts or personal"""
     
     text_to_check = f"{title.lower()} {' '.join(tags).lower()} {' '.join(categories).lower()}"
     
-    # Check for personal content first (more specific)
-    for keyword in personal_keywords:
-        if keyword in text_to_check:
-            return 'personal'
+    # Personal keywords
+    personal_keywords = ['family', 'personal', 'anita', 'penelope', 'life', 'parenting', 'wedding', 'baby']
+    if any(keyword in text_to_check for keyword in personal_keywords):
+        return 'personal'
     
-    # Check for work content
-    for keyword in work_keywords:
-        if keyword in text_to_check:
-            return 'work' if any(k in text_to_check for k in ['ai', 'ml', 'system', 'production', 'scale']) else 'posts'
-    
-    # Default to posts for technical content
+    # Default to posts for all other content (technical, general, etc.)
     return 'posts'
 
-def migrate_post(source_path, target_dir):
+def migrate_post(source_path, target_base_dir):
     """Migrate a single post to the new structure"""
     
     with open(source_path, 'r', encoding='utf-8') as f:
@@ -57,52 +47,81 @@ def migrate_post(source_path, target_dir):
     
     frontmatter, body = parse_frontmatter(content)
     
-    title = frontmatter.get('title', 'Untitled')
-    date = frontmatter.get('date', datetime.now().isoformat())
-    tags = frontmatter.get('tags', [])
-    categories = frontmatter.get('categories', [])
+    if not frontmatter:
+        print(f"Skipping {source_path} due to unparsable frontmatter.")
+        return
+
+    title = frontmatter.get('title', source_path.stem.replace('-', ' ').title())
+    date_str = str(frontmatter.get('date', ''))
     
-    # Categorize content
+    # Attempt to parse date, default to file modification time if not found or invalid
+    try:
+        # Common formats for Hugo/WordPress frontmatter
+        if re.match(r'^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[+-Z]\\d{2}:\\d{2}$', date_str):
+            date_obj = datetime.fromisoformat(date_str)
+        elif re.match(r'^\\d{4}-\\d{2}-\\d{2}$', date_str):
+            date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+        elif re.match(r'^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$', date_str):
+            date_obj = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
+        else:
+            date_obj = datetime.fromtimestamp(source_path.stat().st_mtime)
+    except (ValueError, TypeError):
+        date_obj = datetime.fromtimestamp(source_path.stat().st_mtime)
+        print(f"Warning: Using file modification date for {source_path.name}")
+
+    date = date_obj.strftime('%Y-%m-%d')
+    
+    tags = frontmatter.get('tags', [])
+    if isinstance(tags, str):
+        tags = [t.strip() for t in tags.split(',') if t.strip()]
+    
+    categories = frontmatter.get('categories', [])
+    if isinstance(categories, str):
+        categories = [c.strip() for c in categories.split(',') if c.strip()]
+    
+    # Ensure tags and categories are lists of strings
+    tags = [str(t) for t in tags if t is not None]
+    categories = [str(c) for c in categories if c is not None]
+
+    # Determine content type (posts or personal)
     content_type = categorize_content(frontmatter, title, tags, categories)
     
-    # Create slug from title
+    # Create slug from title, ensuring it's URL-friendly
     slug = re.sub(r'[^a-zA-Z0-9\s-]', '', title.lower())
     slug = re.sub(r'\s+', '-', slug).strip('-')
-    
-    # Update frontmatter for new structure
-    new_frontmatter = {
+    if not slug: # Fallback if title leads to empty slug
+        slug = source_path.stem
+
+    # Prepare new frontmatter
+    new_frontmatter_data = {
         'title': title,
         'date': date,
         'description': frontmatter.get('description', frontmatter.get('summary', '')),
-        'tags': tags,
+        'tags': sorted(list(set(tags))), # Ensure unique and sorted tags
         'type': content_type
     }
     
-    if categories:
-        new_frontmatter['topics'] = categories
-    
-    if content_type == 'work':
-        new_frontmatter['featured'] = True
-    
-    # Create new content
-    new_content = "---\n"
-    for key, value in new_frontmatter.items():
-        if isinstance(value, list):
-            new_content += f"{key}: {yaml.dump(value).strip()}\n"
+    # Convert description to string if it's not already (e.g. if it's a NoneType)
+    if not isinstance(new_frontmatter_data['description'], str):
+        new_frontmatter_data['description'] = str(new_frontmatter_data['description'])
+
+    # Construct new frontmatter string
+    new_frontmatter_str = "---\n"
+    for key, value in new_frontmatter_data.items():
+        if key == 'tags':
+            new_frontmatter_str += f"{key}: {yaml.dump(value, default_flow_style=True).strip()}\n"
         else:
-            new_content += f"{key}: {yaml.dump(value).strip()}\n"
-    new_content += "---\n\n"
-    new_content += body
+            new_frontmatter_str += f"{key}: {value}\n"
+    new_frontmatter_str += "---\n\n"
     
     # Write to new location
-    target_path = target_dir / content_type / f"{slug}.md"
+    target_path = target_base_dir / content_type / f"{date}-{slug}.md"
     target_path.parent.mkdir(parents=True, exist_ok=True)
     
     with open(target_path, 'w', encoding='utf-8') as f:
-        f.write(new_content)
+        f.write(new_frontmatter_str + body)
     
-    print(f"Migrated: {source_path.name} -> {content_type}/{slug}.md")
-    return content_type
+    print(f"Migrated: {source_path.name} -> {content_type}/{date}-{slug}.md")
 
 def main():
     """Main migration function"""
@@ -110,21 +129,26 @@ def main():
     unified_dir = script_dir
     content_dir = unified_dir / 'content'
     
-    # Create directories
-    for section in ['work', 'posts', 'personal']:
-        (content_dir / section).mkdir(parents=True, exist_ok=True)
+    original_main_site_path = Path("/home/node/original-main-site/content/post")
+    original_code_site_path = Path("/home/node/original-code-site/content/post")
     
-    # Migration would happen here if source repos were available
-    # For now, we'll just report the structure
+    print("Starting content migration...")
     
-    print("Content migration structure ready!")
-    print(f"Target directory: {content_dir}")
-    print(f"Sections: work/, posts/, personal/")
-    print("\nTo migrate existing content:")
-    print("1. Clone your existing Hugo repositories")
-    print("2. Run this script with source paths")
-    print("3. Review categorization results")
-    print("4. Commit and deploy")
+    # Migrate posts from original-main-site
+    if original_main_site_path.exists():
+        for md_file in original_main_site_path.rglob('*.md'):
+            migrate_post(md_file, content_dir)
+    else:
+        print(f"Warning: {original_main_site_path} not found. Skipping main site migration.")
+
+    # Migrate posts from original-code-site
+    if original_code_site_path.exists():
+        for md_file in original_code_site_path.rglob('*.md'):
+            migrate_post(md_file, content_dir)
+    else:
+        print(f"Warning: {original_code_site_path} not found. Skipping code site migration.")
+
+    print("Content migration complete!")
 
 if __name__ == '__main__':
     main()

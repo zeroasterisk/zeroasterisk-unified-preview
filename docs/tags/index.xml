@@ -6,99 +6,8 @@
     <description>Recent content in Tags on Alan Blount | AI/ML Engineer at Google</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>agents</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/agents/</link>
-      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/agents/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ai</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/ai/</link>
-      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>architecture</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/architecture/</link>
-      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/architecture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>google</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/google/</link>
-      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/google/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>memory</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/memory/</link>
-      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/memory/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>production</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/production/</link>
-      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/production/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>context-compression</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/context-compression/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/context-compression/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>llm</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/llm/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>optimization</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/optimization/</link>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/optimization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>elixir</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/elixir/</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/elixir/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>exploration</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/exploration/</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/exploration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>functional-programming</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/functional-programming/</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/functional-programming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>learning</title>
-      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/learning/</link>
-      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/learning/</guid>
-      <description></description>
-    </item>
     <item>
       <title>balance</title>
       <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/balance/</link>
@@ -125,6 +34,20 @@
       <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/parenting/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/parenting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>elixir</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/elixir/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/elixir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>learning</title>
+      <link>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/learning/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/learning/</guid>
       <description></description>
     </item>
     <item>

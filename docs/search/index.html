@@ -104,106 +104,244 @@
             <div id="searchIndex" style="display: none;">
                 
                     
-                <div class="search-item" data-title="building agent memory systems at scale" data-content="building agent memory systems at scale working on ai agent systems at google has given me unique insights into what it takes to build memory architectures that work at planetary scale. here are some lessons learned from deploying agent memory systems in production.
-the memory challenge modern ai agents need to remember across conversations, learn from interactions, and maintain context about users, preferences, and ongoing tasks. but naive approaches to agent memory hit walls quickly:
-scale: millions of users, billions of interactions latency: sub-100ms retrieval requirements accuracy: false memories are worse than no memory privacy: user data isolation and security cost: storage and compute costs at scale architecture principles 1. hierarchical memory systems we&amp;rsquo;ve found success with multi-tier memory architectures:
-working memory (ms access) ├── conversation context ├── immediate user state └── active task context episodic memory (100ms access) ├── recent conversations ├── user preferences └── interaction patterns semantic memory (seconds access) ├── knowledge graphs ├── fact databases └── learned user models 2. embedding-based retrieval vector embeddings enable semantic search across memory:
-dense retrieval: find semantically similar past interactions hybrid search: combine vector similarity with metadata filtering continuous learning: update embeddings as user preferences evolve 3. memory consolidation like human sleep, agents need memory consolidation:
-class memoryconsolidator: def consolidate_daily(self, user_memories): # extract patterns from episodic memories patterns = self.extract_patterns(user_memories) # update semantic knowledge self.update_semantic_memory(patterns) # archive or compress old episodic memories self.archive_episodic_memories(user_memories) production challenges consistency at scale with distributed systems serving millions of agents:
-eventually consistent: memory updates propagate asynchronously conflict resolution: handle concurrent memory updates gracefully backup and recovery: memory loss breaks user experience privacy and security memory systems hold sensitive user data:
-data isolation: strict user boundary enforcement access controls: fine-grained permissions for memory access audit trails: track what memories were accessed when cost optimization memory costs scale with users and time:
-intelligent archiving: move cold memories to cheaper storage compression: reduce memory footprint without losing information garbage collection: remove memories that no longer provide value real-world results our agent memory systems now handle:
-10m&#43; active users with personalized memory sub-50ms p95 latency for memory retrieval 99.9% accuracy on memory recall tasks 60% reduction in repeated user explanations key insights start simple: basic key-value memory beats complex systems that don&amp;rsquo;t work user control: let users see and edit their agent&amp;rsquo;s memories graceful degradation: agents should work even when memory is unavailable continuous evaluation: memory quality metrics are critical what&amp;rsquo;s next the future of agent memory lies in:
-cross-agent learning: agents learning from each other&amp;rsquo;s experiences multimodal memory: storing and retrieving images, audio, and video causal reasoning: understanding cause-and-effect in memory temporal reasoning: better understanding of time and sequence building memory systems that work at google scale has taught me that the technical challenges are only half the battle. the other half is building systems that users can understand and trust with their personal information.
-note: technical details shared here reflect general industry knowledge and do not reveal any proprietary google technologies or methods.
-" data-tags="ai agents memory architecture google production">
-                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/11/building-agent-memory-systems-at-scale/">Building Agent Memory Systems at Scale</a></h3>
+                <div class="search-item" data-title="2017 09 06 how to learn" data-content="my buddy arthur recently shared this with me, his synthesis of research he&amp;rsquo;s been doing on how to be a more effective learner.
+stay engaged choose to find the information useful be invested in tackling difficult problems try to anticipate what&amp;rsquo;s next identify big idea use them as anchor to connect details periodically summarize what you&amp;rsquo;ve heard keep conclusions tentative evaluate evidence, don&amp;rsquo;t accept it at face value ask followup questions don&amp;rsquo;t get derailed concentrate on the message, not the messenger don&amp;rsquo;t get thrown off by emotionally charged language don&amp;rsquo;t stop listening when you disagree humanize the presenter, get to know them adjust note taking to the presenter&amp;rsquo;s patterns seriously - how great is that?
+the best one is &amp;ldquo;choose to find it useful&amp;rdquo; which is so simple and yet so important.
+our perspectives and attitudes affect so many things - even something as simple as how much we are going to learn or retain or even understand.
+so, next time you sit down to study or hone some skill or meet a new co-worker and want to remember their name&amp;hellip; make just a bit more effort and be more engaged.
+(i&amp;rsquo;m tryin&amp;rsquo;)
+" data-tags="">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/09/2017-09-06-how-to-learn/">2017 09 06 How To Learn</a></h3>
                     <div class="item-meta">
                         <span class="item-type">Tech</span>
-                        <time>2024-11-20</time>
-                        
-                        <div class="item-tags">
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/ai/" class="tag">ai</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/agents/" class="tag">agents</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/memory/" class="tag">memory</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/architecture/" class="tag">architecture</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/google/" class="tag">google</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/production/" class="tag">production</a>
-                            
-                        </div>
+                        <time>2017-09-06</time>
                         
                     </div>
-                    <p class="item-summary">Building Agent Memory Systems at Scale Working on AI agent systems at Google has given me unique insights into what it takes to build memory architectures that work at planetary scale. Here are some …</p>
+                    <p class="item-summary">My buddy Arthur recently shared this with me, his synthesis of research he&rsquo;s been doing on how to be a more effective learner.
+Stay engaged Choose to find the information useful Be invested in …</p>
                 </div>
                     
                 
                     
-                <div class="search-item" data-title="headroom: context compression for ai applications" data-content="type: &amp;ldquo;posts&amp;rdquo; featured: true headroom: context compression for ai applications one of the biggest challenges in building production ai applications is managing context length effectively. as conversations grow longer, token costs increase exponentially, and eventually you hit context limits that break the experience entirely.
-the problem modern llms have impressive context windows - gpt-4 supports 128k tokens, claude-3 goes up to 200k. but in practice:
-cost scaling: token costs are linear with context length latency impact: longer contexts mean slower responses quality degradation: important information gets lost in the middle hard limits: eventually you hit the ceiling and conversations break the solution: intelligent compression headroom implements semantic context compression that:
-identifies key information using embedding similarity and importance scoring preserves conversation flow by maintaining temporal relationships compresses intelligently removing redundant information while keeping context maintains quality through careful prompt engineering and validation technical architecture class headroomcompressor: def __init__(self, target_ratio=0.3, preserve_recent=5): self.target_ratio = target_ratio self.preserve_recent = preserve_recent self.embedder = sentencetransformer(&amp;#39;all-minilm-l6-v2&amp;#39;) def compress(self, messages): # always preserve system prompt and recent messages recent_messages = messages[-self.preserve_recent:] compressible = messages[1:-self.preserve_recent] # calculate semantic importance scores importance_scores = self._calculate_importance(compressible) # select messages to keep based on importance and diversity kept_messages = self._select_messages( compressible, importance_scores, self.target_ratio ) return [messages[0]] &#43; kept_messages &#43; recent_messages results in production testing:
-70% reduction in context length on average 65% cost savings on conversation-heavy workloads 98% semantic preservation measured by embedding similarity zero conversation breaks from context limits in 6-month deployment open source headroom is available as an open source library that integrates with any llm provider. the compression algorithms are provider-agnostic and can be tuned for different use cases.
-github: github.com/zeroasterisk/headroom
-impact this work has enabled several production ai applications to scale cost-effectively while maintaining conversation quality. the techniques have been adopted by teams building chatbots, ai assistants, and automated support systems.
-" data-tags="ai llm context-compression optimization">
-                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2024/01/headroom-context-compression-for-ai-applications/">Headroom: Context Compression for AI Applications</a></h3>
-                    <div class="item-meta">
-                        <span class="item-type">Tech</span>
-                        <time>2024-01-15</time>
-                        
-                        <div class="item-tags">
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/ai/" class="tag">ai</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/llm/" class="tag">llm</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/context-compression/" class="tag">context-compression</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/optimization/" class="tag">optimization</a>
-                            
-                        </div>
-                        
-                    </div>
-                    <p class="item-summary">type: &ldquo;posts&rdquo; featured: true Headroom: Context Compression for AI Applications One of the biggest challenges in building production AI applications is managing context length effectively. …</p>
-                </div>
-                    
-                
-                    
-                <div class="search-item" data-title="playing with elixir is just fun" data-content="playing with elixir is just fun i&amp;rsquo;ve been using elixir for a few weeks now, and i have to say - it really lives up to the hype. the functional programming paradigms, the actor model with otp, and the fault-tolerant design make it a joy to work with.
-what makes elixir special pattern matching: one of the most elegant features. instead of complex conditionals, you can pattern match directly in function definitions:
-defmodule calculator do def add({:ok, x}, {:ok, y}), do: {:ok, x &#43; y} def add({:error, _}, _), do: {:error, &amp;#34;invalid input&amp;#34;} def add(_, {:error, _}), do: {:error, &amp;#34;invalid input&amp;#34;} end pipe operator: data flows through transformations naturally:
-&amp;#34;hello world&amp;#34; |&amp;gt; string.split() |&amp;gt; enum.map(&amp;amp;string.capitalize/1) |&amp;gt; enum.join(&amp;#34; &amp;#34;) # =&amp;gt; &amp;#34;hello world&amp;#34; otp (open telecom platform): built-in supervision trees and fault tolerance that just work.
-why it matters coming from imperative languages, elixir forces you to think differently about:
-state management (immutable by default) error handling (let it crash philosophy) concurrency (lightweight processes, not threads) system design (supervision trees) real-world impact the fault tolerance isn&amp;rsquo;t just theoretical. elixir systems routinely achieve 99.9999999% (nine 9s) uptime. when a process crashes, the supervisor restarts it cleanly without affecting other parts of the system.
-this is exactly the kind of reliability we need for modern distributed systems. no more hunting down memory leaks or dealing with thread synchronization nightmares.
-next steps i&amp;rsquo;m planning to build a few more projects to really explore the ecosystem:
-phoenix for web applications nerves for embedded systems genstage for data processing pipelines if you haven&amp;rsquo;t tried elixir yet, i highly recommend it. the learning curve is worth it for the paradigm shift alone.
-" data-tags="elixir functional-programming exploration learning">
+                <div class="search-item" data-title="playing with elixir is just fun" data-content="i&amp;rsquo;ve been using elixir for a few weeks now, sometimes forcing it to play nice with mongodb/meteor , which it doesn&amp;rsquo;t really want to do. sometimes with posgres (which it loves). sometimes just plain ole&amp;rsquo; elixir with no persistance.
+it is realllllly fun!
+you know when everyone tells you to watch a movie? sometimes it sucks (and sometimes it sucks because everyone told you to watch it). sometimes it&amp;rsquo;s ok and you can kind of understand why people told you to watch it. sometimes it is totally awesome.
+elixir really is as nice as you&amp;rsquo;ve been hearing why?
+i assume you already know&amp;hellip;
+if not, go search &amp;ldquo;elixir&amp;rdquo; on medium &amp;mdash; ummm&amp;hellip; yeah.
+fast, stable, scalable, effecient&amp;hellip;
+ok it&amp;rsquo;s not perfect - erlang can be quite chatty and slow for some purposes&amp;hellip;
+but erlang has got tons of real-world engineering behind it, and it scales super-well.
+and then you add the elixir layer and the choice becomes easy&amp;hellip;
+i know, this is what ruby programmers were saying back in the day. in fact a lot of the community behind elixir are rubyists. but back in the day, when ruby was saying that, ruby was slow as a dog. it&amp;rsquo;s since gotten a lot faster, but it&amp;rsquo;s not even close to comparing with the scaling effeciency of erlang.
+functional programming and the glorious pipe also, i&amp;rsquo;ve been doing object oriented programming for a long time (in php, node, python - so, ummm, it&amp;rsquo;s been a fight). a lot of programming is all about managing state and objects make a lot of sense&amp;hellip; keep the state organized, know it&amp;rsquo;s boundaries.
+but i&amp;rsquo;ve gotta tell you, and functional programming is a joy. there state is even further removed, it&amp;rsquo;s not a part of your code/function at all &amp;mdash; you remove all the state to outside the scope of your code and persist to database or in memory stores, and then all of your code is pure passthrough transformations and logic.
+and transformations are exactly what the pipe opperator was built for.
+here&amp;rsquo;s a super quick example.
+take a list of strings, map each one of them into a list of upper case strings, then make the list unique/distinct, then sort it.
+(for now, ignore that &amp;amp; and the /1 thing &amp;mdash; it makes a lot of sense but might look wonky for now)
+def my_func(list_of_strings) do list_of_strings |&amp;gt; enum.map(&amp;amp;string.capitalize/1) |&amp;gt; enum.uniq |&amp;gt; enum.sort end the pipe opporator |&amp;gt; basically says, &amp;ldquo;staring with some thing, do something to it, and pass it along&amp;rdquo;. the next function after the |&amp;gt; recieves the output of the thing on the left, as it&amp;rsquo;s first argument&amp;hellip; you can pass in second, third, etc. whatever you output, goes on to the next function.
+that is most of what we want to do in programming, but we usually have to do it all backwards&amp;hellip;
+here is the same as above, in javascript:
+const my_func = (list_of_strings) =&amp;gt; { return array.from(new set(list_of_strings.map(s =&amp;gt; s.touppercase()))).sort } not terrible, we can chain the sort, and could possibly have made this more elegant in several ways&amp;hellip; we could use one of the great functional libraries for javascript, like ramdajs, but it&amp;rsquo;s still difficult to pass along content to the next function in the chain&amp;hellip; more often, we do something, and wrap that in the next step, so our input/argument is the most deeply nested part of the function.
+here is the same as above, in python:
+def my_func(list_of_strings): return sorted(list(set([s.upper() for s in list_of_strings]))) it&amp;rsquo;s actually pretty nice - the array comprehension is bad-ass. the functions are all distinct and fairly obvious.
+but the progress, from one step to the next, is always backwards.
+it seems like such a little thing, but once you get used to it - not having it is annoying.
+pattern matching makes me smarter i don&amp;rsquo;t think i&amp;rsquo;m going to put in the animated gif of a mind-blowing person here&amp;hellip; but know that i thought about it.
+def my_func(%{&amp;#34;material&amp;#34;: &amp;#34;wood&amp;#34;} = instructions) do map.merge(instructions, %{&amp;#34;tool&amp;#34; =&amp;gt; &amp;#34;nails&amp;#34;}) end def my_func(%{&amp;#34;material&amp;#34;: &amp;#34;metal&amp;#34;} = instructions) do map.merge(instructions, %{&amp;#34;tool&amp;#34; =&amp;gt; &amp;#34;welder&amp;#34;}) end def my_func(%{&amp;#34;material&amp;#34;: &amp;#34;sever&amp;#34;} = instructions) do map.merge(instructions, %{&amp;#34;tool&amp;#34; =&amp;gt; &amp;#34;elixir&amp;#34;}) end because of pattern matching, almost all of your logic can be avoided.
+seriously, how much of your code looks like: &amp;ldquo;if i got this input, do this, otherwise, if i got this input do that, otherwise if i got this other input, do something else&amp;rdquo;.
+instead of all of that, you can define the same function, and look for different inputs, and do different things&amp;hellip; every function is a router.
+it can also allow you to easily destructure from the function definition line, and extract variables and compare values.:w
+tooling for days - testing and docs - reliable compiler - strict but flexible i am very impressed with the tooling for elixir. developer experience is obviously very important for this community and it shows.
+testing is fast and easy, convenient, and common.
+documentation is primarily done via @doc blocks in code, and generated into html via ex_doc.
+tying both of those together, the doctesting is very impressive&amp;hellip;
+@doc &amp;#34;&amp;#34;&amp;#34; here is a list to upper, uniquer, sorter (i know you&amp;#39;ve always wanted it!) examples iex&amp;gt; mymodule.my_func([&amp;#34;a&amp;#34;, &amp;#34;a&amp;#34;, &amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;]) [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;]) iex&amp;gt; mymodule.my_func([]) []) &amp;#34;&amp;#34;&amp;#34; basically - you describe your function in the normal doc block (since you know it will be rendered to html and read, you usually care more) and then you provide examples of how to use the function and what you expect to get out&amp;hellip;
+but here&amp;rsquo;s the amazing thing&amp;hellip; the examples show up in your documentation, nicely formatted, and they also are executed as unit tests&amp;hellip;
+(thanks python for this one - still the implementation is so much simpler/faster/cleaner in elixir)
+i also love that the compiler tells me about most of my errors.
+credo is a great linter, which i didn&amp;rsquo;t have to spend a month configuring, and didn&amp;rsquo;t have to decide if semi-colons were in this year or not.
+bascially - even for web tools - for most of the work i&amp;rsquo;m doing, i setup test.watch and i never actually have to look at the browser/api until i&amp;rsquo;m pretty confident things are working under-the-hood. i always get a warm glow when that works out, and i can usually get there with other languages, but there were no obsticales with elixir.
+quality &amp;amp; maintainability as you can tell, i&amp;rsquo;ve drunk the kool-aid a bit. i&amp;rsquo;m happy with elixir.
+i&amp;rsquo;m not as fast with it as i expected to be. there is a lot to (re)learn, but more-to-the fact, elixir kindof forces you to be a better developer. the strong discouragement of if conditionals, and to take advantage of pattern matching, helps me to take fewer shortcuts &amp;ndash; no procedural sprawl, all small functions. the great testing experience encourages tdd and more test coverage. the great docs encourages you to be nice to future developers.
+i have a feeling that the stuff i build in elixir will be stable and solid for a while and a lot easier to maintain.
+" data-tags="">
                     <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/07/playing-with-elixir-is-just-fun/">Playing with Elixir is just FUN</a></h3>
                     <div class="item-meta">
                         <span class="item-type">Tech</span>
                         <time>2017-07-10</time>
                         
-                        <div class="item-tags">
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/elixir/" class="tag">elixir</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/functional-programming/" class="tag">functional-programming</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/exploration/" class="tag">exploration</a>
-                            
-                            <a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/tags/learning/" class="tag">learning</a>
-                            
-                        </div>
+                    </div>
+                    <p class="item-summary"><p>I&rsquo;ve been using Elixir for a few weeks now, sometimes
+<a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/meteor-and-elixir-rocky-courtship/">forcing it to play nice with Mongodb/Meteor</a>
+, which it doesn&rsquo;t really want to do.
+Sometimes with Posgres <em>(which it loves)</em>.
+Sometimes …</p></p>
+                </div>
+                    
+                
+                    
+                <div class="search-item" data-title="meteor and elixir (part one) a rocky courtship" data-content="i have been watching elixir for almost 2 years now, and debating if it&amp;rsquo;s mature enough for me to invest in.
+obviously erlang is super-mature, and elixir is quite stable, but it&amp;rsquo;s a question of &amp;ldquo;is the community mature enough yet?&amp;rdquo;
+since i&amp;rsquo;m now writing this, i believe it is &amp;ldquo;ready&amp;rdquo;, and i&amp;rsquo;m beginning a journey to build out some services in elixir to stand up next to existing node services (meteorjs) and slow move funcitonality over to to elixir.
+chapter one: proof of concept, mongo is supposed to be simple.
+if you&amp;rsquo;re not already familiar with any of these tools:
+[elixir you should checkout the meteor website if you&amp;rsquo;re not already familiar with meteor you should checkout the meteor website come back to this when you&amp;rsquo;re comfortable and want to optimize an existing application. goals build an elixir&#43;phoenix application which will connect to an existing mongodb for an existing meteorjs/node application, and expose functionality via a graphql api.
+database and schema un-changeable, must match what is already there, in mongo authentication must piggyback/use meteor accounts permissions must re-implement functionality of meteor roles framework = elixir&#43;phoenix (more on why, below) graphql api to be handled via absinthe why? graphql is badass. it will replace rest, like rest replaced soap.
+i could make a graphql server for an existing meteor application inside meteor, or via a node api, or any other server side framework&amp;hellip;
+but i&amp;rsquo;ve been watching elixir for a while and i&amp;rsquo;m impressed by it&amp;rsquo;s performace, ha, and syntax. functional &amp;amp; parallel. (dave thomas approves)
+getting started install elixir nothing hard or tricky here&amp;hellip;
+brew install elixir (for osx, others for you) and mix install phoenix i chose to install phoenix 1.3.0-rc2 because i read up on it and i think it&amp;rsquo;s got some good changes (in app structure) and likely to land sometime soon-ish.
+mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+build a new phoenix app here&amp;rsquo;s my command:
+mix phx.new --no-html --no-brunch --app e2mapi elixir-meteor-graphql
+--no-html i don&amp;rsquo;t need serverside rendering --no-brunch i don&amp;rsquo;t need elixir to build js packages --app e2mapi i have to give it a &amp;ldquo;friendly&amp;rdquo; app name elixir-meteor-graphql my project folder i can then cd into the dir, (make it a git repo &amp;amp; commit,) then edit the mix.exs file to change deps.
+add mongodb_ecto (to connect to mongo, but with ecto awesomeness) this should be as simple as adding in a mix package&amp;hellip; but i ran into several problems with versions and mis-matching.
+i tried reverting to phoenix 1.2, i tried various branches and tags of various packages.
+after coming up with a stable seeming combination my pr was not accepted and we are told to instead force the core ecto to 2.0.
+there is no readme telling us this, and i think it&amp;rsquo;s a temporary requirement, but it is currently a requirement.
+so - here is my mix.exs for mongo &#43; ecto:
+{:mongodb_ecto, github: &amp;#34;michalmuskala/mongodb_ecto&amp;#34;, branch: &amp;#34;ecto-2&amp;#34;}, # &amp;lt;-- using mongo {:ecto, &amp;#34;~&amp;gt; 2.0&amp;#34;, override: true}, # &amp;lt;-- have to force ecto version :( (likely to change in the future, hopefully towards basic versions)
+add absinthe (for graphql) again this should be simple, but i ran into issues getting the adaptors to play nice, specifically with poison &amp;amp; absinthe_ecto.
+here&amp;rsquo;s the combination which worked for me, now.
+# poision 3.&#43; flags older phoenix ecto -- no breaking changes override:true {:poison, &amp;#34;~&amp;gt; 3.1&amp;#34;, override: true}, {:absinthe, &amp;#34;~&amp;gt; 1.3&amp;#34;}, {:absinthe_ecto, git: &amp;#34;https://github.com/absinthe-graphql/absinthe_ecto.git&amp;#34;}, {:absinthe_plug, github: &amp;#34;absinthe-graphql/absinthe_plug&amp;#34;, branch: &amp;#34;master&amp;#34;} (likely to change in the future, hopefully towards basic versions)
+edit config to get to the database ecto should now be able to talk mongo but it does not know who to talk to yet.
+edit config/dev.exs and change the config at the bottom to be something like:
+# configure your database config :e2mapi, e2mapi.repo, adapter: mongo.ecto, database: &amp;#34;e2mapi_dev&amp;#34;, hostname: &amp;#34;localhost&amp;#34; port: 27017 get deps &amp;amp; sanity check at this point, you should be able to get all deps without errors
+$ mix deps.get
+and you should be able to fire up iex and load your new (empty) phoenix server
+$ iex -s mix phx.server
+if it worked right you should see something like:
+[info] running e2mapi.web.endpoint with cowboy using http://0.0.0.0:4000 interactive elixir (1.4.4) - press ctrl&#43;c to exit (type h() enter for help) (can&amp;rsquo;t connect to mongo? is mongo running locally? is the configuration correct?)
+extra work for testing embrace testing. if you have not already done so, now is your chance.
+elixir makes it super easy to write tests. they are less fragile &amp;amp; more powerful (thanks to elixir syntax). and doctests support is crazy good too.
+sadly, here too, there are extra hoops to jump through in order to get ecto &#43; mongo playing nicely.
+first, the easy one, we have a test env to config, just like dev.
+edit config/test.exs and change the config at the bottom to be something like:
+# configure your database config :e2mapi, e2mapi.repo, adapter: mongo.ecto, database: &amp;#34;e2mapi_test&amp;#34;, hostname: &amp;#34;localhost&amp;#34; port: 27017 after doing so, i started getting errors like the following:
+$ mix test compiling 12 files (.ex) generated e2mapi app ** (runtimeerror) cannot configure sandbox with pool nil. to use the sql sandbox, configure your repository pool as: pool: ecto.adapters.sql.sandbox (ecto) lib/ecto/adapters/sql/sandbox.ex:429: ecto.adapters.sql.sandbox.mode/2 (elixir) lib/code.ex:370: code.require_file/2 (elixir) lib/enum.ex:645: enum.&amp;#34;-each/2-lists^foreach/1-0-&amp;#34;/2 (elixir) lib/enum.ex:645: enum.each/2 (mix) lib/mix/tasks/test.ex:229: mix.tasks.test.run/1 after doing some searching, i found &amp;ldquo;sql sandbox&amp;rdquo; code in several test files.
+$ ag sandbox test/support/channel_case.ex 30: :ok = ecto.adapters.sql.sandbox.checkout(e2mapi.repo) 32: ecto.adapters.sql.sandbox.mode(e2mapi.repo, {:shared, self()}) test/support/conn_case.ex 31: :ok = ecto.adapters.sql.sandbox.checkout(e2mapi.repo) 33: ecto.adapters.sql.sandbox.mode(e2mapi.repo, {:shared, self()}) test/support/data_case.ex 29: :ok = ecto.adapters.sql.sandbox.checkout(e2mapi.repo) 32: ecto.adapters.sql.sandbox.mode(e2mapi.repo, {:shared, self()}) test/test_helper.exs 3:ecto.adapters.sql.sandbox.mode(e2mapi.repo, :manual) i commented out the relevant sections and now mix test shows me green lights and my world is happy.
+$ mix test compiling 3 files (.ex) ... finished in 0.03 seconds 3 tests, 0 failures randomized with seed 649726 build our application todo&amp;hellip; this is a work in progress&amp;hellip; i will come back with a part 2, soon.
+" data-tags="">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/meteor-and-elixir-part-one-a-rocky-courtship/">Meteor and Elixir (part one) A Rocky Courtship</a></h3>
+                    <div class="item-meta">
+                        <span class="item-type">Tech</span>
+                        <time>2017-06-23</time>
                         
                     </div>
-                    <p class="item-summary">Playing with Elixir is just FUN I&rsquo;ve been using Elixir for a few weeks now, and I have to say - it really lives up to the hype. The functional programming paradigms, the actor model with OTP, …</p>
+                    <p class="item-summary"><p>I have been watching Elixir for almost 2 years now, and debating if it&rsquo;s mature enough for me to invest in.</p>
+<p>Obviously Erlang is super-mature, and Elixir is quite stable, but it&rsquo;s a …</p></p>
+                </div>
+                    
+                
+                    
+                <div class="search-item" data-title="2017 06 14 pdfjs ui simple proof of concept" data-content="" data-tags="">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/06/2017-06-14-pdfjs-ui-simple-proof-of-concept/">2017 06 14 Pdfjs Ui Simple Proof Of Concept</a></h3>
+                    <div class="item-meta">
+                        <span class="item-type">Tech</span>
+                        <time>2017-06-14</time>
+                        
+                    </div>
+                    <p class="item-summary"></p>
+                </div>
+                    
+                
+                    
+                <div class="search-item" data-title="meteor 1.5 ~ bundle optimization &#43; examples" data-content="i have been playing with meteor 1.5 and it&amp;rsquo;s dynamic imports, which can be used to reduce the amount of javascript code sent to the browser.
+this article is a deep dive into how to profile and optimize your client side code to make smarter use of the new dynamic imports&amp;hellip;
+which will make meteor load faster for your users.
+if you&amp;rsquo;re not already familiar with meteor you should checkout the meteor website and the meteor chef come back to this when you&amp;rsquo;re comfortable and want to optimize an existing application.
+meteor 1.5 landed, and it&amp;rsquo;s got a lot of improvements, but i think the big new feature that people want to know about is the ability to dynamically import code.
+what is that? why is it useful? how do i do it? how do i know what to dynamically import?
+well, lets look into some of those questions, and how to use these new tools to improve your application&amp;rsquo;s load time.
+this post is about identifying what to optimize and how to optimize&amp;hellip; i will do another about how to develop/architect better dynamically imported components.
+setup a basic meteor project you can clone this repo and checkout the 01-initial branch. or you can use the following instructions to get up to this starting point. or you can jump right into this topic on your own project.
+to do anything, we need a simple test project. i am starting with meteor chef base and i am adding react-dates and a bit of functionality to pick date ranges (i also happen to know it has a noticeable impact on bundle size, which we will see later).
+git clone https://github.com/themeteorchef/base.git meteor-example-optimize-client-bundle cd meteor-example-optimize-client-bundle rm -rf .git &amp;amp;&amp;amp; git init &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git add .meteor/* meteor update --release 1.5 cat .meteor/release meteor@1.5 meteor npm install --save react-dates moment react-addons-shallow-compare npm start i then edited the code and added an example to create a simple example project.
+not terrible for a quick example (and not a todo list).
+goal: reduce time to initial render you can clone this repo and checkout the 02-before-optimization branch.
+make things faster, always. initial render of the site/app is a great metric to improve on and one of the pain points for meteor apps.
+when in production mode, meteor builds all of your app into 1 big js and 1 big css file - these are called the &amp;ldquo;client bundle&amp;rdquo;.
+meteor does it&amp;rsquo;s best to minimize those files, and cache them&amp;hellip; but it can still be a whole lot of stuff sent to the client (this is all of your code and your code&amp;rsquo;s dependencies) on initial pageload&amp;hellip; especially if you don&amp;rsquo;t always need some of those components and dependencies.
+to test and profile, we have to run in production mode.
+meteor --production
+our super-tiny example app is not too bad, but could certainly get better.
+our biggest slowdown by far is the bundle of all javascript.
+size download_time js bundle 494 kb 444 ms css bundle 7 kb 29 ms wow, but this is such a tiny application&amp;hellip; what can we do?
+plan: profile to determine work to be done you should never optimize without profiling.
+sure, when you develop keep performance and optimization in mind - use best practices and all that. but when you are trying to figure out how you can improve performance, you should use tools to profile and get information about what to optimize. without that profiling information, you will be treading water, spending lots of effort for little value.
+how to profile meteor javascript bundle? so we know we need to reduce the total javascript bundle&amp;hellip; but how? what&amp;rsquo;s big? what&amp;rsquo;s easy to remove? what&amp;rsquo;s not used?
+luckily, there is a now a bundle-visualizer package which gives us an awesome sundial graph for identifying size in our initial load.
+meteor add bundle-visualizer npm run start-as-prod # ^ if you don&amp;#39;t have my package.json scripts, you would run # meteor --production update there is a new meteor 1.5.1&#43; feature where you don&amp;rsquo;t have to add the package you can just add it for the start&amp;hellip; meteor --extra-packages bundle-visualizer --production which i have setup in package.json as npm run start-profiled
+then an overlay happens in your browser and you can hover over parts to see what they total size is for the part, and it&amp;rsquo;s children&amp;hellip;
+this is amazing real quick review of some numbers here:
+section percent react-dom 9.4% react-dates 9.1% react-bootstrap 8.4% bootstrap 6.4% jquery 4.6% handlebars 4.0% app code 1.7% my entire app code is 32k which is only 1.7% of the clientside bundle!
+how can we optimize? so we can look at our codebase in sections and do something&amp;hellip;
+what exactly will we even be doing?
+it really comes down to 3 options:
+remove a section of code from our project entirely (best solution, but not often possible) reduce the size of a section (micro optimization, not usually effective) delay loading a section via dynamic import (our new option) remove in this example, i could remove jquery or handlebars because i&amp;rsquo;m not using it&amp;hellip; but meteor chef base is&amp;hellip;
+this is outside of the scope of this article. if you can remove code, do so.
+reduce there&amp;rsquo;s very little i could do to reduce the size of my code, my application code is super tiny.
+this is usually the least valuable way to spend your time. better to remove or delay a bunch first.
+delay ok&amp;hellip; what can i delay, and what are the ramifications of doing so?
+basically you want to look for things which are only used once or twice, but which have a heavy footprint.
+pick high value targets - sections to delay armed with a profile of code sections (size), we try to identify a what we can remove from our initial bundle, and only load as needed.
+we start by looking at the &amp;ldquo;biggest&amp;rdquo; sections of code (clockwise), and for each section we try to ask ourselves if we can remove or delay loading.
+pro delay:
+is the section of code used only once or in a very few components? is the section of code an optional &amp;ldquo;secondary&amp;rdquo; feature? is the section of code a big enough percentage of the bundle to make it worthwhile? against delay:
+is the component required to make the initial page render look ok to the user? is the page going to significantly jump when the component gets loaded dynamically, after the rest of the page has rendered? is the lack of that component going to mess things up for server side rendering? in this case, react-dates is a great candidate, because i only use it once in my codebase, but it&amp;rsquo;s got a huge footprint in the clientside bundle.
+note: i&amp;rsquo;m using ag (the silver searcher) or rg (ripgrep) to search through file contents, lightning fast.
+$ ag &amp;#39;react-dates&amp;#39; imports -c imports/ui/components/pickdates.js:1 optimize: delay loading code with a dynamic import since we decided to target react-dates, i am going to dynamically load the only component which uses it, pickdates.
+i could do this several ways, but here&amp;rsquo;s a very simple approach.
+first i install a super-useful helper react-loadable, which handles the &amp;ldquo;maybe i&amp;rsquo;m loading, maybe i&amp;rsquo;m loaded&amp;rdquo; react component.
+meteor npm install --save react-loadable before: normal import part of clientside bundle
+import pickdates from &amp;#39;./pickdates&amp;#39;; after: dynamic import no longer a part of clientside bundle
+import loader from &amp;#39;react-loadable&amp;#39;; // generic loading component to show while transfering section of code const loadingcomponent = () =&amp;gt; &amp;lt;span classname=&amp;#34;text-muted&amp;#34;&amp;gt;&amp;lt;i classname=&amp;#34;fa fa-refresh&amp;#34; /&amp;gt;&amp;lt;/span&amp;gt;; // new version of the component, now: loading --&amp;gt; rendered const pickdates = loader({ // this does the dynamic import, and returns a promise loader: () =&amp;gt; import(&amp;#39;./pickdates&amp;#39;), // this is our generic loading display (optional) loading: loadingcomponent, // this is a delay before we decide to show our loadingcomponent (optional) delay: 200, }); // there are more options you can use, // including a timeout, and even a pre-loader... neat! it can get a lot more complex, but this is a fine place to start.
+react-loadable is a hoc which will render our component when it&amp;rsquo;s available. the loader: &amp;lt;func&amp;gt; function recieves a promise which resolves as soon as the dynamic import is done. the import(&amp;lt;path&amp;gt;) is the where the actual dynamic import (magic) happens. it returns a promise which resolves when the component is on the client. the loading (component) shows while the component is not yet loaded. the delay hides the loadingcomponent for this long, so there is less flicker in case the component is already cached and can just load-in super fast. because the import is no longer part of the initial clientside bundle, it is compiled with all of it&amp;rsquo;s dependencies, separately. they will be loaded later, the first time they are used, and then cached on the client. (more on this later)
+review: after our dynamic import you can clone this repo and checkout the 04-after-optimization branch. note (updated version on the master branch&amp;hellip; code changed, this page was updated too&amp;hellip; that old branch was not)
+did it do anything? lets profile again.
+npm run start-as-prod # ^ if you don&amp;#39;t have my package.json scripts, you would run # meteor --production js bundle size before dynamic import 494 kb after dynamic import 459 kb and how about our sundial?
+it looks like we no longer have the react-dates module at all&amp;hellip;
+but if i get rid of the bundle-visualizer then i can see our date picker working&amp;hellip;
+meteor remove bundle-visualizer update there is a new meteor 1.5.1&#43; feature where you don&amp;rsquo;t have to add the package, so thererefor you don&amp;rsquo;t have to remove it meteor --extra-packages bundle-visualizer --production
+gotcha: you have to dynamic import all references you could have mycomponent and othercomponent, both of which included react-dates.
+the react-dates section of code would only be removed from the initial clientside bundle if both mycomponent and othercomponent were dynamically imported.
+any static import, ensures the component and all descendants are in the clientside bundle.
+understand: so how does it work? where is did the component go? how does it work?
+if you use the developer tools &amp;gt; network tab &amp;gt; ws (websocket) and look at the frames, you can find a request for the dynamic import, and the response with the dynamic import payload.
+that&amp;rsquo;s actually kind of a big frame!
+but it is cached, websocket transfer is pretty fast, and it only is loaded when it&amp;rsquo;s needed.
+furthermore, each component is only imported 1 time, even if imported via different paths.
+keep this in mind: dynamic imports are not free the dynamic import does make the section of code disappear from your clientside bundle.
+it does &amp;ldquo;improve&amp;rdquo; the profiled metrics&amp;hellip; but it has a few costs:
+starting meteor is a wee bit slower (sorry devs) added complexity bundle over websocket can not be offloaded to a cdn dynamic imports are not (currently) profileable&amp;hellip; so to profile you&amp;rsquo;d have to make static imports again. built in optimization: each component is only imported 1 time you can clone this repo and checkout the 06-experiments branch.
+i conducted a few experiments (more below) and i now better understand how the imports work.
+here is an obvious structure of components:
+- mypage - trunk &amp;lt;-- dynamicly imported from a page - limb - branch &amp;lt;-- dynamicly imported from a page - twig - leaf at first, my experiment was to log into the console, when js &amp;ldquo;loaded&amp;rdquo; code.
+that caused me to believe they were in fact imported twice&amp;hellip; but they were not.
+in fact, if you look at the websocket frames, you can see that leaf component is only imported 1 time. and it is more obvious, when you load the trunk first and the branch second: then there is not second import for branch, because it was already imported above&amp;hellip;
+this is really impressive, and speaks highly of the module system in meteor
+experiments: what can you do with dynamic imports? you can clone this repo and checkout the 06-experiments branch.
+i felt like trying out a few more variations on how things can be loaded.
+this is a work in progress, more coming soon
+import as in-file function, and in-file loader (works) import as shared function, but in-file loader (works) import as shared function, path as arg (fails, can not find the path) import a npm package directly (fails) import a component that imports a component (works, and a good idea, within reason) experiments: profiling imports? you can clone this repo and checkout the 07-profiling branch.
+import (static) lodash.clonedeep = 8.9kb screenshot import (static) lodash/clonedeep = 19.5kb screenshot screenshot2 summary you can now segment your meteor clientside codebase.
+you can profile and delay expensive components &#43; dependencies you can make an admin section (or whatever section) of your site only load when needed. you can make every single route, only load when needed (sub-optimal, but effective, temporarily). or better, you can dynamically load individual components&amp;hellip; (especially expensive ones) thanks &amp;amp; credits huge thanks to meteor, mdg, and especially ben&amp;hellip; i&amp;rsquo;ve been learning a lot just by reading your commits, and i am grateful for your contributions.
+also a huge thanks to jesse for the bundle-visualizer and all your other meteor work.
+definitely read the meteor blog post and maybe the huge pull request for information about dynamic imports.
+i&amp;rsquo;ve also played with code from meteor&amp;rsquo;s react-loadable example which helped me to understand dynamic imports.
+other good reading, webpack&amp;rsquo;s dynamic import docs are useful too.
+" data-tags="">
+                    <h3><a href="https://zeroasterisk.github.io/zeroasterisk-unified-preview/2017/05/meteor-1.5-~-bundle-optimization--examples/">Meteor 1.5 ~ Bundle Optimization &#43; Examples</a></h3>
+                    <div class="item-meta">
+                        <span class="item-type">Tech</span>
+                        <time>2017-05-31</time>
+                        
+                    </div>
+                    <p class="item-summary"><p>I have been playing with <a href="https://meteor.com/">Meteor</a> 1.5 and it&rsquo;s dynamic imports,
+which can be used to reduce the amount of javascript code sent to the browser.</p>
+<p>This article is a deep dive into how to profile and …</p></p>
                 </div>
                     
                 
