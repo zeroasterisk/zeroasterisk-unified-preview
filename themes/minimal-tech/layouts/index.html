@@ -41,8 +41,8 @@
                     {{ end }}
                     {{ with .Params.tags }}
                     <div class="card-tags">
-                        {{ range first 3 . }}
-                        <span class="tag">{{ . }}</span>
+                        {{ range . }}
+                        <a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>
                         {{ end }}
                     </div>
                     {{ end }}

@@ -21,7 +21,7 @@
                         {{ if .Params.tags }}
                         <div class="item-tags">
                             {{ range .Params.tags }}
-                            <span class="tag">{{ . }}</span>
+                            <a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>
                             {{ end }}
                         </div>
                         {{ end }}

@@ -19,7 +19,7 @@
             {{ with .Params.tags }}
             <div class="content-tags">
                 {{ range . }}
-                <span class="tag">{{ . }}</span>
+                <a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>
                 {{ end }}
             </div>
             {{ end }}
