@@ -717,3 +717,111 @@ body {
     padding-top: 2rem;
     border-top: 1px solid #e1e8ed;
 }
+
+/* Cross-post Styling */
+.crosspost-notice {
+    background: rgba(52, 152, 219, 0.1);
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.crosspost-label {
+    background: #3498db;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.external-source {
+    font-style: italic;
+    color: #2c3e50;
+}
+
+.canonical-notice {
+    background: rgba(241, 196, 15, 0.1);
+    border: 1px solid #f39c12;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.canonical-notice a {
+    color: #d68910;
+    text-decoration: underline;
+}
+
+.crosspost-article .content-body {
+    border-left: 3px solid #3498db;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.crosspost-footer {
+    background: rgba(236, 240, 241, 0.8);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.crosspost-footer h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.external-link {
+    display: inline-block;
+    background: #3498db;
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+    word-break: break-all;
+    font-size: 0.9rem;
+}
+
+.external-link:hover {
+    background: #2980b9;
+}
+
+/* Homepage crosspost card styling */
+.crosspost-card {
+    border-left: 4px solid #3498db;
+    position: relative;
+}
+
+.card-crosspost-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #3498db;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.crosspost-badge {
+    background: #3498db;
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+}
+
+.crosspost-source {
+    font-style: italic;
+    color: #7f8c8d;
+}

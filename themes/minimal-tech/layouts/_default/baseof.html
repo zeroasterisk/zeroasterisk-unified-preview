@@ -23,6 +23,14 @@
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     
+    <!-- Canonical URL -->
+    {{ if .Params.canonical_url }}
+    <link rel="canonical" href="{{ .Params.canonical_url }}">
+    <meta property="article:canonical_url" content="{{ .Params.canonical_url }}">
+    {{ else }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ end }}
+    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
