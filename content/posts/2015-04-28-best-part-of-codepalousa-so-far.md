@@ -1,14 +1,16 @@
 ---
-title: "Best part of CodepaLOUsa so far"
-date: 2015-04-28
-tags: ["conference", "networking", "javascript", "2015"]
+title: "Best part of CodepaLOUsa so far…"
+date: 2015-04-28T05:10:01+00:00
+tags: ["2015"]
 type: "posts"
 ---
 
-# Best part of CodepaLOUsa so far...
+Best part of [CodepaLOUsa][1] so far&#8230; sitting next to [Douglas Crockford][2] at dinner tonight. Occasionally I&#8217;m the lucky one. (Hope I didn&#8217;t bore him too much)
 
-Sitting next to Douglas Crockford at dinner tonight. Occasionally I'm the lucky one. 
+Anyway &#8211; having a fun time at CodepaLOUsa and hope all other attendees are too.
 
-(Hope I didn't bore him too much)
+<http://codepalousa.com/schedule>
 
-Anyway – having a fun time at CodepaLOUsa and hope all other attendees are too.
+
+ [1]: http://codepalousa.com/
+ [2]: http://www.crockford.com/

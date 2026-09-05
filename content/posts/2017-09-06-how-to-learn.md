@@ -1,9 +1,16 @@
 ---
-title: "How To Learn"
+title: "2017 09 06 How To Learn"
 date: 2017-09-06
-tags: ["learning", "education", "productivity", "research", "personal-development"]
+tags: ["2017"]
 type: "posts"
 ---
+
++++
+description = "How To Learn --- Arthur Knowledge"
+title = "How to Learn --- Meta"
+categories = [""]
+tags = ["learning", "meta", "engaged", "Arthur"]
++++
 
 My buddy Arthur recently shared this with me,
 his synthesis of research he's been doing on how to be a more effective learner.

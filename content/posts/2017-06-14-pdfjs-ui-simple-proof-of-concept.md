@@ -1,12 +1,21 @@
 ---
-title: "PDF.js UI - Simple Proof of Concept"
+title: "2017 06 14 Pdfjs Ui Simple Proof Of Concept"
 date: 2017-06-14
-tags: ["pdf", "javascript", "ui", "prototype", "tech", "development", "pdfjs"]
+tags: ["2017"]
 type: "posts"
 ---
 
-# PDF.js UI - Simple Proof of Concept
++++
+draft = true
+author = ""
+categories = []
+date = "2017-06-23T13:27:38-04:00"
+description = ""
+featured = ""
+featuredalt = ""
+featuredpath = ""
+linktitle = ""
+title = "2017 06 14 pdfjs ui simple proof of concept"
 
-Working on a simple proof of concept for PDF.js integration with a custom UI layer.
++++
 
-More details coming soon...
