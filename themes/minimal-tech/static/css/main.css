@@ -92,24 +92,20 @@ body::before {
     text-decoration: none;
     color: #34495e;
     font-weight: 600;
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
-    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    transition: background 0.2s ease;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    /* Vintage engineering button style */
-    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.1), inset 1px 1px 0 rgba(255,255,255,0.8);
-    border: 1px solid #dee2e6;
+    /* Match tag styling */
+    background: #ecf0f1;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    background: linear-gradient(145deg, #e9ecef, #dee2e6);
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.15), inset 1px 1px 0 rgba(255,255,255,0.9);
-    color: #2c3e50;
-    transform: translateY(1px);
+    background: #3498db;
+    color: white;
 }
 
 /* Home Page Styles */
@@ -298,17 +294,21 @@ body::before {
 .btn-link {
     display: inline-block;
     margin: 0 1rem;
-    padding: 0.8rem 1.5rem;
-    background: #3498db;
-    color: white;
+    padding: 0.3rem 0.8rem;
+    background: #ecf0f1;
+    color: #34495e;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
     transition: background 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn-link:hover {
-    background: #2980b9;
+    background: #3498db;
+    color: white;
 }
 
 /* Content Pages */
@@ -530,12 +530,16 @@ body::before {
 }
 
 .pagination-link {
-    color: #3498db;
+    background: #ecf0f1;
+    color: #34495e;
     text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border: 1px solid #3498db;
-    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .pagination-link:hover {
@@ -849,20 +853,22 @@ body::before {
 
 .external-link {
     display: inline-block;
-    background: #3498db;
-    color: white !important;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
+    background: #ecf0f1;
+    color: #34495e !important;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
     text-decoration: none;
     margin-top: 1rem;
     font-weight: 600;
+    font-size: 0.85rem;
     transition: background 0.2s ease;
-    word-break: break-all;
-    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .external-link:hover {
-    background: #2980b9;
+    background: #3498db;
+    color: white !important;
 }
 
 /* Homepage crosspost card styling */
